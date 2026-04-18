@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pnchy — Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:    rgb(233, 229, 205);
+      --soft:  rgb(250, 247, 242);
+      --warm:  rgb(253, 240, 213);
+      --dark:  rgb(41, 37, 35);
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--serif);
+      min-height: 100vh;
+    }
+
+    a { color: var(--dark); }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 24px;
+      background: rgba(233, 229, 205, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--dark); }
+    .nav-logo img { width: 36px; height: 36px; object-fit: contain; }
+    .nav-logo span { font-family: var(--serif); font-style: italic; font-size: 22px; letter-spacing: -0.03em; }
+
+    .nav-links { display: flex; gap: 8px; }
+    .nav-links a {
+      font-family: var(--sans); font-size: 13px; font-weight: 500;
+      padding: 7px 14px; border-radius: 100px; transition: opacity .15s;
+      background: var(--dark); color: var(--soft); text-decoration: none;
+    }
+    .nav-links a:hover { opacity: .8; }
+
+    /* OUTER */
+    .page {
+      min-height: 100vh;
+      background: var(--bg);
+      padding: 80px 24px 120px;
+    }
+
+    .inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding-top: 20px;
+    }
+
+    /* BACK LINK */
+    .back-link {
+      font-family: var(--serif);
+      font-size: 17px;
+      color: var(--dark);
+      opacity: 0.55;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      transition: opacity .15s;
+    }
+    .back-link:hover { opacity: .9; }
+
+    /* HEADER CARD */
+    .header-card {
+      background: var(--warm);
+      border-radius: 16px;
+      padding: 32px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .header-card .updated {
+      font-family: var(--serif);
+      font-size: 14px;
+      opacity: 0.5;
+      font-style: italic;
+    }
+
+    .header-card h1 {
+      font-family: var(--serif);
+      font-size: 52px;
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+    }
+
+    .header-card .intro {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--dark);
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--warm);
+      border: 1.5px solid rgba(41,37,35,0.1);
+      border-radius: 6px;
+      padding: 2px 10px;
+      font-family: var(--serif);
+      font-size: 13px;
+      color: var(--dark);
+    }
+
+    /* SECTION */
+    .section {
+      border-top: 1.5px solid rgba(41,37,35,0.12);
+      padding-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .section h2 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .section p {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--dark);
+      opacity: 0.85;
+    }
+
+    .section p code {
+      font-family: var(--serif);
+      background: var(--warm);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+
+    /* TABLE */
+    .table-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1.5px solid rgba(41,37,35,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--serif);
+      font-size: 16px;
+      color: var(--dark);
+    }
+
+    th {
+      text-align: left;
+      padding: 10px 14px;
+      background: var(--warm);
+      font-weight: 400;
+      font-style: italic;
+      border-bottom: 1.5px solid rgba(41,37,35,0.12);
+      font-size: 15px;
+      font-family: var(--serif);
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(41,37,35,0.08);
+      vertical-align: top;
+      line-height: 1.65;
+      opacity: 0.85;
+      font-family: var(--serif);
+      font-size: 16px;
+    }
+
+    td.italic { font-style: italic; }
+
+    tr:last-child td { border-bottom: none; }
+
+    .small-note {
+      font-family: var(--serif);
+      font-size: 14px;
+      opacity: 0.6;
+      line-height: 1.65;
+    }
+
+    /* COLORED CARDS */
+    .color-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .color-card {
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .color-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      opacity: 0.55;
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    .color-card p {
+      font-family: var(--serif);
+      font-size: 16px;
+      line-height: 1.65;
+      opacity: 0.92;
+      margin: 0;
+    }
+
+    .color-card p em { font-style: italic; }
+
+    /* REG GRID */
+    .reg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .reg-card {
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .reg-card .reg-key {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-style: italic;
+      margin: 0 0 6px;
+    }
+
+    .reg-card .reg-desc {
+      font-family: var(--serif);
+      font-size: 15px;
+      opacity: 0.9;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* FOOTER CTA CARD */
+    .footer-cta {
+      background: var(--warm);
+      border-radius: 16px;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-cta h2 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+    }
+
+    .footer-cta p {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--dark);
+      opacity: 0.85;
+    }
+
+    .footer-cta a.email-btn {
+      display: inline-block;
+      background: var(--dark);
+      color: var(--warm);
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 400;
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      width: fit-content;
+      transition: opacity .15s;
+    }
+
+    .footer-cta a.email-btn:hover { opacity: .8; }
+
+    @media (max-width: 600px) {
+      .header-card h1 { font-size: 36px; }
+      .reg-grid { grid-template-columns: 1fr; }
+      .nav-logo span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="images/New_PNchy_Logo.png" alt="Pnchy" />
+      <span>pnchy</span>
+    </a>
+    <div class="nav-links">
+      <a href="https://pnchy.framer.website/early-access">Early Access</a>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="inner">
+
+      <!-- Back link -->
+      <a href="/" class="back-link">← Back to Pnchy</a>
+
+      <!-- Header card -->
+      <div class="header-card">
+        <p class="updated">Last updated: April 2026</p>
+        <h1>Privacy Policy</h1>
+        <p class="intro">
+          Pnchy is built for your neighborhood, so we believe you have a right to know exactly how your information is handled. This policy is written to be read, not buried.
+        </p>
+        <div class="tags">
+          <span class="tag">GDPR</span>
+          <span class="tag">UK GDPR</span>
+          <span class="tag">CCPA</span>
+          <span class="tag">LGPD</span>
+          <span class="tag">US State Laws</span>
+          <span class="tag">PIPEDA</span>
+          <span class="tag">POPIA</span>
+        </div>
+      </div>
+
+      <!-- Who We Are -->
+      <div class="section">
+        <h2>Who we are</h2>
+        <p>
+          Pnchy is a community loyalty platform that connects local businesses with the neighborhoods they serve. We are headquartered in Boston, Massachusetts. If you have any questions about this Privacy Policy or would like to exercise your rights, please contact us at <a href="mailto:pnchyapp@gmail.com">pnchyapp@gmail.com</a>. We will respond within 30 days.
+        </p>
+      </div>
+
+      <!-- What We Collect -->
+      <div class="section">
+        <h2>Information we collect</h2>
+        <p>We collect only what we need to operate Pnchy. The table below describes each category of information, why we collect it, and how we receive it.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Purpose</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="italic">Email address</td>
+                <td>Early access registration, product updates, and marketing communications</td>
+                <td>Submitted by you</td>
+              </tr>
+              <tr>
+                <td class="italic">Full name</td>
+                <td>Account identification and personalization</td>
+                <td>Submitted by you</td>
+              </tr>
+              <tr>
+                <td class="italic">Business or consumer role</td>
+                <td>To tailor your Pnchy experience appropriately</td>
+                <td>Submitted by you</td>
+              </tr>
+              <tr>
+                <td class="italic">Message content</td>
+                <td>To respond to your inquiry or feedback</td>
+                <td>Submitted by you via contact form</td>
+              </tr>
+              <tr>
+                <td class="italic">Anonymized analytics data</td>
+                <td>Understanding site usage to improve our product (consent required)</td>
+                <td>Google Analytics 4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small-note">We do not collect payment card numbers, government-issued identification, or any sensitive personal data as defined under applicable law.</p>
+      </div>
+
+      <!-- How We Use It -->
+      <div class="section">
+        <h2>How we use your information</h2>
+        <p>Your information is used for the following purposes:</p>
+        <div class="color-cards">
+          <div class="color-card" style="background:#3A85A6;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Analytics: </em>We analyze how visitors navigate Pnchy so we can improve the experience. Analytics are only activated after you provide explicit consent through our cookie banner.</p>
+          </div>
+          <div class="color-card" style="background:#F2B476;">
+            <div class="color-dot" style="background:#2a1f10;"></div>
+            <p style="color:#2a1f10;"><em>Marketing: </em>We may contact you with updates about Pnchy features, launches, or announcements. You may unsubscribe from any marketing communication at any time, without penalty.</p>
+          </div>
+          <div class="color-card" style="background:#689581;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Personalization: </em>We use information about whether you are a local business owner or a community member to tailor your Pnchy experience accordingly.</p>
+          </div>
+          <div class="color-card" style="background:#BB5A52;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Service Delivery: </em>When you submit a form or request early access, we use your information to process and respond to that request.</p>
+          </div>
+          <div class="color-card" style="background:#6D4886;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Legal Compliance: </em>We may process or retain certain data to satisfy applicable legal, regulatory, or contractual obligations.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Analytics -->
+      <div class="section">
+        <h2>Google Analytics</h2>
+        <p>
+          We use Google Analytics 4 to understand how visitors use our website, including which pages are visited, how long visitors spend on them, and their approximate geographic region. Google Analytics collects only anonymized and aggregated data. We do not use it to collect names, email addresses, or payment information.
+        </p>
+        <p>
+          Analytics are activated only after you provide explicit consent through our cookie banner. If you decline, Google Analytics operates in cookieless mode and no tracking cookies are placed on your device. You may withdraw consent at any time by clearing the <code>pnchy_cookie_consent</code> value from your browser's local storage.
+        </p>
+      </div>
+
+      <!-- Sharing -->
+      <div class="section">
+        <h2>How we share your information</h2>
+        <p>We do not sell, rent, or trade your personal information. We share your data only in the following limited circumstances:</p>
+        <div class="color-cards">
+          <div class="color-card" style="background:#3A85A6;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Google LLC: </em>If you consent to analytics, anonymized usage data is processed by Google in accordance with their Privacy Policy at policies.google.com/privacy.</p>
+          </div>
+          <div class="color-card" style="background:#F2B476;">
+            <div class="color-dot" style="background:#2a1f10;"></div>
+            <p style="color:#2a1f10;"><em>Legal or regulatory bodies: </em>We may disclose information where required by law, court order, or to protect the rights, property, or safety of Pnchy or our users.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Your Rights -->
+      <div class="section">
+        <h2>Your rights</h2>
+        <p>Depending on your jurisdiction, you may have some or all of the following rights with respect to your personal data:</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Right</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Access</td>
+                <td>You may request a copy of the personal data we hold about you.</td>
+              </tr>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Correction</td>
+                <td>You may request that we correct any inaccurate or incomplete information.</td>
+              </tr>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Deletion</td>
+                <td>You may request that we delete your personal data, subject to any legal retention obligations.</td>
+              </tr>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Data portability</td>
+                <td>You may request your data in a structured, commonly used, machine-readable format.</td>
+              </tr>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Withdraw consent</td>
+                <td>You may revoke your consent to analytics at any time by clearing your cookie preference.</td>
+              </tr>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Opt out of marketing</td>
+                <td>You may unsubscribe from marketing communications at any time using the link in any email.</td>
+              </tr>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Object or restrict</td>
+                <td>You may object to or request a limitation on certain types of processing.</td>
+              </tr>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Non-discrimination</td>
+                <td>Exercising your rights will not result in a reduced level of service (CCPA requirement).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          To exercise any of these rights, please contact <a href="mailto:pnchyapp@gmail.com">pnchyapp@gmail.com</a>. We will respond within 30 days. If you are located in the EU or UK and believe your rights have not been respected, you have the right to lodge a complaint with your local supervisory authority.
+        </p>
+      </div>
+
+      <!-- Regulations -->
+      <div class="section">
+        <h2>Regulations we comply with</h2>
+        <p>Pnchy is designed from the ground up to respect applicable privacy laws across multiple jurisdictions. Below is a summary of how each framework applies to us.</p>
+        <div class="reg-grid">
+          <div class="reg-card" style="background:#3A85A6;">
+            <p class="reg-key" style="color:#fff;">GDPR</p>
+            <p class="reg-desc" style="color:#fff;">European Union. We rely on explicit consent as the legal basis for analytics under Article 6(1)(a). All data subject rights apply.</p>
+          </div>
+          <div class="reg-card" style="background:#689581;">
+            <p class="reg-key" style="color:#fff;">UK GDPR</p>
+            <p class="reg-desc" style="color:#fff;">United Kingdom. The same framework as the EU GDPR applies following the UK's exit from the European Union.</p>
+          </div>
+          <div class="reg-card" style="background:#BB5A52;">
+            <p class="reg-key" style="color:#fff;">CCPA / CPRA</p>
+            <p class="reg-desc" style="color:#fff;">California. We do not sell or share your personal data. You have the right to know, delete, and opt out.</p>
+          </div>
+          <div class="reg-card" style="background:#F2B476;">
+            <p class="reg-key" style="color:#2a1f10;">LGPD</p>
+            <p class="reg-desc" style="color:#2a1f10;">Brazil. Processing is based on consent and legitimate interest. You have the right to access, correct, and delete your data.</p>
+          </div>
+          <div class="reg-card" style="background:#6D4886;">
+            <p class="reg-key" style="color:#fff;">US State Laws</p>
+            <p class="reg-desc" style="color:#fff;">Virginia, Colorado, Connecticut, Texas, Oregon, and others. Opt-out rights are honored for all residents.</p>
+          </div>
+          <div class="reg-card" style="background:#3A85A6;">
+            <p class="reg-key" style="color:#fff;">PIPEDA</p>
+            <p class="reg-desc" style="color:#fff;">Canada. We collect data only with your knowledge and consent. You may access and correct your data upon request.</p>
+          </div>
+          <div class="reg-card" style="background:#689581;">
+            <p class="reg-key" style="color:#fff;">POPIA</p>
+            <p class="reg-desc" style="color:#fff;">South Africa. We adhere to the principles of lawful processing and data minimization as required by the Act.</p>
+          </div>
+        </div>
+        <p class="small-note">
+          Our legal basis for processing analytics data under GDPR and UK GDPR is your explicit consent pursuant to Article 6(1)(a). Our legal basis for processing form submissions is the performance of a contract or pre-contractual steps pursuant to Article 6(1)(b).
+        </p>
+      </div>
+
+      <!-- Retention -->
+      <div class="section">
+        <h2>Data retention</h2>
+        <p>
+          We retain your personal data only for as long as necessary to fulfill the purposes described in this policy. Form submissions and early access registrations are retained for up to two years. Analytics data is subject to Google's own retention settings, which default to 14 months. You may request deletion of your data at any time by contacting us.
+        </p>
+      </div>
+
+      <!-- Security -->
+      <div class="section">
+        <h2>Security</h2>
+        <p>
+          We implement industry-standard technical and organizational measures to protect your personal data. Our website is hosted on Framer's infrastructure. No sensitive financial data is stored on Pnchy-controlled servers at this time. While no system is entirely immune to risk, we take appropriate steps to safeguard your information.
+        </p>
+      </div>
+
+      <!-- Changes -->
+      <div class="section">
+        <h2>Changes to this policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time as Pnchy evolves. When we do, the date at the top of this page will be revised. For material changes, we will notify you directly by email if we hold your address. Your continued use of Pnchy following any changes constitutes your acceptance of the revised policy.
+        </p>
+      </div>
+
+      <!-- Footer CTA -->
+      <div class="footer-cta">
+        <h2>Questions or concerns?</h2>
+        <p>We are a small team building something real for your neighborhood. If you have any questions about this policy or would like to exercise your privacy rights, please reach out directly.</p>
+        <a href="mailto:pnchyapp@gmail.com" class="email-btn">pnchyapp@gmail.com</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pnchy — 404</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:    rgb(233, 229, 205);
+      --soft:  rgb(250, 247, 242);
+      --dark:  rgb(61, 53, 48);
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--serif);
+      width: 1200px;
+      height: 1080px;
+      max-width: 100vw;
+      max-height: 100vh;
+      overflow: clip;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 24px;
+      background: rgba(233, 229, 205, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 8px; }
+    .nav-logo img { width: 36px; height: 36px; object-fit: contain; }
+    .nav-logo span { font-family: var(--serif); font-style: italic; font-size: 22px; letter-spacing: -0.03em; }
+
+    .nav-links { display: flex; gap: 8px; }
+    .nav-links a {
+      font-family: var(--sans); font-size: 13px; font-weight: 500;
+      padding: 7px 14px; border-radius: 100px; transition: opacity .15s;
+      background: var(--soft); color: var(--dark);
+    }
+    .nav-links a:hover { opacity: .8; }
+
+    /* 404 IMAGE — centered at 38% from top */
+    .img-404 {
+      position: absolute;
+      width: 502px;
+      height: 324px;
+      left: 51%; top: 38%;
+      transform: translate(-51%, -50%);
+      object-fit: contain;
+    }
+
+    /* TEXT — centered at 52% */
+    .text-404 {
+      position: absolute;
+      width: 600px; max-width: 90vw;
+      left: 50%; top: 52%;
+      transform: translate(-50%, -50%);
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(16px, 2vw, 22px);
+      letter-spacing: -0.02em; line-height: 1.6;
+      color: var(--dark);
+      text-align: center;
+    }
+
+    /* HOME LINK — centered at 64% */
+    .home-link {
+      position: absolute;
+      width: 100px;
+      left: 50%; top: 64%;
+      transform: translate(-50%, -50%);
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(16px, 2vw, 22px);
+      letter-spacing: -0.02em;
+      color: var(--dark);
+      text-align: center;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: opacity .15s;
+    }
+    .home-link:hover { opacity: .65; }
+
+    @media (max-width: 680px) {
+      body { width: 100vw; height: 100vh; }
+      .nav-logo span { display: none; }
+      .img-404 { width: 85%; height: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="images/New_PNchy_Logo.png" alt="Pnchy" />
+      <span>pnchy</span>
+    </a>
+    <div class="nav-links">
+      <a href="https://pnchy.framer.website/early-access">Early Access</a>
+    </div>
+  </nav>
+
+  <img class="img-404"
+    src="https://framerusercontent.com/images/cp0rmNNvGMLXrSbW4dJHaPkWo.png"
+    alt="404" />
+
+  <div class="text-404">
+    Oh, it looks like you landed in uncharted territory. We are working on something special for you. Once we have it, be sure to come back.
+  </div>
+
+  <a href="/" class="home-link">Home</a>
+
+</body>
+</html>

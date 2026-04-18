@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pnchy</title>
+  <meta name="description" content="Where Communities Unlock Rewards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:    rgb(233, 229, 205);
+      --soft:  rgb(250, 247, 242);
+      --warm:  rgb(253, 240, 213);
+      --dark:  rgb(61, 53, 48);
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--serif);
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      background: rgba(233, 229, 205, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 8px; }
+    .nav-logo img { width: 36px; height: 36px; object-fit: contain; }
+    .nav-logo span { font-family: var(--serif); font-style: italic; font-size: 22px; letter-spacing: -0.03em; }
+
+    .nav-links { display: flex; gap: 8px; align-items: center; }
+    .nav-links a {
+      font-family: var(--sans); font-size: 13px; font-weight: 500;
+      padding: 7px 14px; border-radius: 100px; transition: opacity .15s;
+    }
+    .pill-dark  { background: var(--dark);  color: var(--soft); }
+    .pill-light { background: var(--soft);  color: var(--dark); }
+    .pill-dark:hover, .pill-light:hover { opacity: .8; }
+
+    /* ── HERO ── */
+    .hero {
+      height: 580px;
+      padding-top: 60px;
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-bg-img {
+      position: absolute;
+      width: 42%;
+      min-width: 280px;
+      max-width: 500px;
+      aspect-ratio: 2.45;
+      top: 70px;
+      left: 51%; transform: translateX(-51%);
+      object-fit: cover;
+      border-radius: 10px;
+      z-index: 1;
+    }
+
+    .hero-headline {
+      position: absolute;
+      width: 39%;
+      min-width: 280px;
+      max-width: 546px;
+      left: 51%; top: 60%;
+      transform: translate(-51%, -50%);
+      font-family: var(--serif);
+      font-size: clamp(20px, 2.6vw, 36px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: var(--dark);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hero-btns {
+      position: absolute;
+      display: flex; gap: 10px;
+      left: 52%; top: 70%;
+      transform: translate(-52%, -50%);
+      z-index: 1;
+    }
+
+    .hero-btns a {
+      font-family: var(--sans); font-size: 13px; font-weight: 500;
+      height: 30px; padding: 0 12px; border-radius: 100px;
+      display: inline-flex; align-items: center;
+      transition: opacity .15s;
+    }
+    .hero-btns a:hover { opacity: .8; }
+
+    /* ── MISSION ── */
+    .mission {
+      background: var(--bg);
+      padding: 23px 20px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 6px; text-align: center;
+    }
+
+    .mission h2 {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(22px, 3vw, 40px);
+      letter-spacing: -0.04em; line-height: 1.1;
+      max-width: 600px;
+    }
+
+    .mission p {
+      font-family: var(--serif); font-style: italic;
+      font-size: clamp(16px, 2vw, 28px);
+      letter-spacing: -0.03em;
+    }
+
+    /* ── CIRCLES ── */
+    .circles-wrap {
+      background: var(--bg);
+      padding: 80px 20px;
+      display: flex; justify-content: center;
+    }
+
+    .circles {
+      width: 960px; max-width: 100%;
+      height: 583px;
+      position: relative;
+      background: var(--bg);
+      overflow: hidden;
+    }
+
+    .ci {
+      position: absolute;
+      border-radius: 50%;
+      object-fit: cover;
+      height: 312px; max-height: 312px;
+      width: 32%; max-width: 33%; min-width: 80px;
+      top: 0;
+    }
+
+    .ci.left   { left: 18%; transform: translateX(-50%); }
+    .ci.center { left: 50%; transform: translateX(-50%); width: 312px; }
+    .ci.right  { left: 82%; transform: translateX(-50%); }
+
+    .cl {
+      position: absolute;
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(13px, 1.5vw, 20px);
+      letter-spacing: -0.02em; color: var(--dark); opacity: .8;
+      white-space: nowrap;
+    }
+
+    .cl.left   { left: 18%; top: 74%; transform: translateX(-50%); }
+    .cl.center { left: 50%; top: 74%; transform: translateX(-50%); }
+    .cl.right  { left: 82%; top: 74%; transform: translateX(-50%); }
+
+    .only-local {
+      position: absolute;
+      font-family: var(--serif); font-style: italic;
+      font-size: clamp(12px, 1.4vw, 20px);
+      letter-spacing: -0.02em; color: var(--dark);
+      left: 50%; top: 95%; transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    /* ── CARDS ── */
+    .cards-wrap {
+      background: var(--bg);
+      padding: 42px 20px;
+      display: flex; justify-content: center;
+      overflow: hidden;
+    }
+
+    .cards {
+      width: 960px; max-width: 100%;
+      display: flex; gap: 20px;
+    }
+
+    .card {
+      flex: 1; height: 440px;
+      background: var(--soft);
+      border-radius: 20px;
+      padding: 40px;
+      position: relative;
+      overflow: visible;
+    }
+
+    /* card 1 phone images spill right */
+    .cp {
+      position: absolute;
+      border-radius: 25px;
+      object-fit: cover;
+    }
+    .cp-1 { width: 98%; height: 348px; left: 1%;  top: 50%; transform: translateY(-60%); }
+    .cp-2 { width: 307px; height: 348px; left: calc(99% + 8px);  top: 50%; transform: translateY(-60%); }
+    .cp-3 { width: 307px; height: 348px; left: calc(99% + 8px + 315px); top: 50%; transform: translateY(-60%); }
+
+    .card-bottom {
+      position: absolute;
+      bottom: 40px; left: 20px; right: 20px;
+      display: flex; flex-direction: column; gap: 5px; z-index: 1;
+    }
+
+    .card-italic {
+      font-family: var(--serif); font-style: italic;
+      font-size: clamp(13px, 1.3vw, 18px);
+      letter-spacing: -0.02em; line-height: 1.3; color: var(--dark);
+    }
+
+    .card-heading {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(15px, 1.5vw, 22px);
+      letter-spacing: -0.04em; line-height: 1.3; color: var(--dark);
+      margin-top: 27px;
+    }
+
+    /* ── ARTICLES ── */
+    .articles-wrap {
+      padding: 40px 20px;
+      display: flex; justify-content: center;
+    }
+
+    .articles {
+      display: flex; flex-direction: column; gap: 20px;
+    }
+
+    .art-link {
+      display: flex; align-items: center; gap: 10px;
+      transition: opacity .15s;
+    }
+    .art-link:hover { opacity: .65; }
+
+    .art-thumb { width: 30px; height: 30px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+
+    .art-title {
+      font-family: var(--serif); font-size: 16px;
+      letter-spacing: -0.02em; line-height: 1.6; color: var(--dark);
+    }
+
+    /* ── CTA ── */
+    .cta-wrap {
+      background: var(--bg); height: 205px;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 40px;
+      padding: 20px;
+    }
+
+    .cta-text { display: flex; flex-direction: column; align-items: center; }
+
+    .cta-pre {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(14px, 1.8vw, 24px);
+      letter-spacing: -0.04em; color: var(--dark);
+    }
+
+    .cta-big {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(48px, 9vw, 110px);
+      letter-spacing: -0.04em; line-height: 1;
+      color: var(--dark);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--soft);
+      padding: 0 20px;
+      display: flex; justify-content: center;
+    }
+
+    .footer-inner {
+      width: 960px; max-width: 100%;
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      gap: 40px; min-height: 100px; flex-wrap: wrap; padding: 30px 0;
+    }
+
+    .footer-logo-img {
+      position: absolute;
+      width: 53px; height: 53px;
+      left: 4px; bottom: 37px;
+      object-fit: contain;
+    }
+
+    .footer-link {
+      font-family: var(--serif); font-size: 17px;
+      letter-spacing: -0.02em; color: var(--dark);
+      height: 30px; display: flex; align-items: center;
+      transition: opacity .15s;
+    }
+    .footer-link:hover { opacity: .6; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 680px) {
+      .nav-logo span { display: none; }
+
+      .hero { height: auto; min-height: 520px; padding-bottom: 40px; }
+
+      .hero-bg-img { width: 82%; top: 64px; }
+
+      .hero-headline { width: 86%; font-size: 18px; top: 57%; }
+
+      .hero-btns { top: 73%; flex-wrap: wrap; justify-content: center; width: 88%; left: 50%; transform: translateX(-50%); }
+
+      .circles { height: 230px; }
+      .ci { height: 130px; }
+      .only-local { font-size: 10px; }
+
+      .cards { flex-direction: column; }
+      .card { height: auto; min-height: 280px; overflow: hidden; }
+      .cp-2, .cp-3 { display: none; }
+      .cp-1 { height: 220px; transform: translateY(-55%); }
+
+      .footer-logo-img { display: none; }
+      .footer-inner { justify-content: center; gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="images/New_PNchy_Logo.png" alt="Pnchy" />
+      <span>pnchy</span>
+    </a>
+    <div class="nav-links">
+      <a href="https://pnchy.framer.website/early-access" class="pill-dark">Early Access</a>
+      <a href="https://pnchy.framer.website/blog" class="pill-light">Wait, What Do You Do?</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-bg-img"
+      src="https://framerusercontent.com/images/6o61KDIjea0Wf97WE4S7dr7yqM.png"
+      alt="Pnchy" />
+    <div class="hero-headline">Where Communities Unlock Rewards.</div>
+    <div class="hero-btns">
+      <a href="https://pnchy.framer.website/early-access" class="pill-dark">Early Access</a>
+      <a href="https://pnchy.framer.website/blog" class="pill-light">Wait, What Do You Do?</a>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="mission">
+    <h2>On a mission to bringing back the town's charm</h2>
+    <p>One block at a time.</p>
+  </section>
+
+  <!-- THREE CIRCLES -->
+  <div class="circles-wrap">
+    <div class="circles">
+      <img class="ci left"
+        src="images/circle-map.png"
+        alt="Discover Local" />
+      <img class="ci center"
+        src="images/circle-scan.png"
+        alt="Feel Local" />
+      <img class="ci right"
+        src="images/circle-stamp.jpg"
+        alt="Return Local" />
+      <span class="cl left">Discover Local</span>
+      <span class="cl center">Feel Local</span>
+      <span class="cl right">Return Local</span>
+      <span class="only-local">Only for local spots.</span>
+    </div>
+  </div>
+
+  <!-- THREE CARDS -->
+  <div class="cards-wrap">
+    <div class="cards">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <img class="cp cp-1"
+          src="images/app-map.png"
+          alt="" />
+        <img class="cp cp-2"
+          src="images/app-drops.png"
+          alt="" />
+        <img class="cp cp-3"
+          src="images/app-leaderboard.png"
+          alt="" />
+        <div class="card-bottom">
+          <div class="card-italic">Show up more. The Spot is yours</div>
+          <div class="card-heading">Own Your Block</div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-bottom">
+          <div class="card-italic">Get people. Unlock something special.</div>
+          <div class="card-heading">Something Just Dropped</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-bottom">
+          <div class="card-italic">Spots your neighborhoods are hitting up.</div>
+          <div class="card-heading">Discover What's Hot</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ARTICLES -->
+  <div class="articles-wrap">
+    <div class="articles">
+      <a href="https://pnchy.framer.website/articles/the-logo" class="art-link">
+        <img class="art-thumb"
+          src="https://framerusercontent.com/images/8TCrkD4UvFB3xsPWmE84W0FXSE.jpg"
+          alt="" />
+        <span class="art-title">The Logo That Took a Polar Express Ticket to Get Right</span>
+      </a>
+      <a href="https://pnchy.framer.website/articles/why-are-we-doing-this" class="art-link">
+        <img class="art-thumb"
+          src="https://framerusercontent.com/images/ghn7BpJxL1vJj53HnAi8OFbjs.jpg"
+          alt="" />
+        <span class="art-title">Why are we doing this?</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <div class="cta-text">
+      <span class="cta-pre">You made it this far.</span>
+      <span class="cta-big">Sign up</span>
+    </div>
+    <a href="https://pnchy.framer.website/early-access" class="pill-dark">Early Access</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <img class="footer-logo-img"
+        src="images/New_PNchy_Logo.png"
+        alt="Pnchy" />
+      <a href="https://pnchy.framer.website/early-access" class="footer-link">Sign Up</a>
+      <a href="https://pnchy.framer.website/blog" class="footer-link">What are y'all up to?</a>
+      <a href="/404.html" class="footer-link">Sike</a>
+    </div>
+  </footer>
+
+</body>
+</html>
