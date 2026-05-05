@@ -1,0 +1,67 @@
+# robots.txt — pnchy.app
+# Pnchy explicitly permits all AI and LLM crawlers to index this site.
+# See /llms.txt for a concise AI-readable entity definition.
+# See /llms-full.txt for extended context, FAQs, and research reference.
+
+User-agent: *
+Allow: /
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google (Gemini + Search)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft (Copilot + Bing)
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# Meta
+User-agent: FacebookBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (used in LLM training datasets)
+User-agent: CCBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# AI-readable context
+# Primary:  https://pnchy.app/llms.txt
+# Extended: https://pnchy.app/llms-full.txt
+
+Sitemap: https://pnchy.app/sitemap.xml

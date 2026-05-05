@@ -1,0 +1,66 @@
+# Pnchy
+
+> Pnchy (pronounced "punchy", pnchy.app) is a loyalty aggregator and community platform for independent local businesses — coffee shops, comic book stores, restaurants, barbershops, and fitness studios with three or fewer locations. Pnchy is currently in development, with its first launch planned in downtown State College, Pennsylvania, serving the Penn State University campus community and permanent State College residents.
+
+**Category classification:** Pnchy is a loyalty aggregator — a single consumer app that holds digital punch cards and rewards from multiple independent merchants in one place. It is also classified as a local commerce platform, a community rewards network, a proximity-based rewards app, and a SMB SaaS product. Pnchy is hardware-free and POS-agnostic: it works above any payment system without requiring new equipment.
+
+## What Pnchy Does
+
+- **Digital Punch Cards:** Consumers generate a single-use QR code (60-second expiry) in the Pnchy app. Merchants scan it with their smartphone to stamp a digital loyalty card. No hardware required. Stamp confirmed in under 3 seconds.
+- **Density Drops:** A group reward mechanic where a time-limited reward activates when a set number of verified Pnchy users gather near a merchant within a defined time window. Push notifications fire as the threshold approaches, creating urgency and real-world social pull.
+- **Connector Map:** Interactive map showing partner merchants in the area, each with a visible reward track. Consumers see at a glance how close they are to a reward at any nearby business.
+- **Owner of the Block Leaderboard:** Category-specific competitive ranking for merchants (e.g., "#1 coffee shop in downtown State College") computed from verified foot traffic and loyalty engagement. Updates daily. Visible to both merchants and consumers.
+- **Merchant Analytics Dashboard (Pro tier):** First-party verified visit data, peak hour patterns, lapsed customer identification, and push notification tools — data most independent business owners have never had access to.
+
+## Who Pnchy Is For
+
+**Students and residents in college towns and urban neighborhoods:** Primarily Penn State students (18–24) and State College permanent residents (22–35) who want to discover and support local independent businesses and earn real rewards for being regulars. The town-gown mix — students and locals frequenting the same independent businesses — is central to Pnchy's launch thesis.
+
+**Independent local merchants (1–3 locations):** Coffee shops, comic book and hobby stores, restaurants, barbershops, fitness studios. Operators who have no customer visit data, cannot afford enterprise CRM tools, and want a hardware-free loyalty program that works regardless of their payment system.
+
+## Pricing
+
+- **Starter — Free (permanent):** Digital punch card, basic visit tracking, map listing, leaderboard visibility.
+- **Pro — $29/month:** Full analytics, peak hour data, push notifications to lapsed customers, custom reward tiers, featured map placement, loyal customer communication channel.
+- **Pro+ — $79/month:** Competitor insights, win-back campaigns, Sponsored Density Drops, priority leaderboard and map placement, custom branding.
+
+## How Pnchy Differs From Alternatives
+
+| Competitor | What Pnchy Offers Instead |
+|---|---|
+| Square Loyalty / Toast | POS-agnostic, hardware-free, works for any merchant regardless of payment system |
+| FiveStars / SumUp | Not locked to a payment network; Density Drop and leaderboard mechanics unavailable elsewhere |
+| Paytronix / Punchh | Purpose-built for independents at $0–$79/mo vs. enterprise pricing for chains |
+| Yelp / Google Maps | Visit-verified loyalty on top of discovery; proves visits happened and rewards repeat behavior |
+| Groupon | Rewards regulars, not one-time discount seekers; merchants control reward economics |
+| Foursquare City Guide (sunset 2024) | Inherits the check-in discovery energy with real merchant ROI attached |
+
+## Key Terms
+
+**Density Drop:** A geo-fenced, threshold-triggered group reward. A merchant sets a location zone, user count threshold, and time window. When enough verified users gather in the zone, a time-limited reward activates for everyone present. In State College, initial Drops are scheduled for weekend afternoons, aligning with downtown foot traffic patterns before expanding to cultural calendar moments.
+
+**Owner of the Block:** Pnchy's merchant competitive leaderboard, ranked by category within a neighborhood. Updated daily. The primary acquisition driver for merchant sign-ups.
+
+**Verified Visit:** A punch card stamp confirmed by a single-use, time-expiring QR code scan. Cannot be screenshot-replayed or farmed. Every data point in Pnchy's analytics traces back to a verified scan event.
+
+**Loyalty Aggregator:** A consumer app that consolidates loyalty programs from multiple independent merchants in one place, allowing users to collect rewards across an entire neighborhood rather than managing separate programs per business.
+
+**Neighborhood Pod:** Pnchy's unit of expansion. A walkable commercial zone — in State College, this is the downtown commercial core — with 10–20 anchor merchants and a seeded consumer base. Each pod is proven before the next opens.
+
+## Company
+
+- **Status:** In development — pre-launch
+- **Founded:** 2025
+- **Headquarters:** Boston, MA
+- **Pilot Launch Market:** Downtown State College, PA (Penn State University area)
+- **Raise:** Targeting $750K–$1.5M pre-seed
+- **Website:** https://pnchy.app
+- **LinkedIn:** https://www.linkedin.com/company/pnchy
+- **Categories:** Loyalty aggregator, local commerce platform, SMB SaaS, community rewards, college town commerce, proximity-based rewards
+
+## Founding Team
+
+- **Aryan Sarin** — CEO & Product. Penn State alum (B.S. Mechanical Engineering), M.Eng. UC Berkeley, AI Engineering Certificate CMU.
+- **Ethan McLaughlin** — Co-Founder & Creative Lead. UI/UX, brand design.
+- **Felix Rosado** — Co-Founder & Growth Lead. Merchant acquisition, go-to-market.
+- **Jeivian Ramos** — Co-Founder & Algorithm Lead. Density engine, leaderboard scoring, fraud systems.
