@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Pnchy Business Finder — preview (mocked, no backend)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --egg-white: #FAF7F2;
+    --green: #689581;
+    --yellow: #F2B476;
+    --red: #BB5A52;
+    --blue: #3A85A6;
+    --purple: #6D4886;
+    --ink: #2B2420;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh; /* avoids the iOS Safari address-bar jump */
+    background: var(--egg-white);
+    font-family: "Instrument Serif", Georgia, serif;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+  .page-note {
+    max-width: 560px;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.7;
+    margin-bottom: 34px;
+    font-style: italic;
+  }
+  .pnchy-widget-wrap { width: 100%; max-width: 560px; margin: 0 auto; }
+  .pnchy-status-bar {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 64px; padding: 14px 28px;
+    transition: background-color 350ms ease, border-radius 250ms ease;
+    text-align: center; cursor: pointer;
+  }
+  .pnchy-status-text {
+    font-style: italic; font-size: clamp(16px, 4vw, 20px);
+    color: var(--egg-white); line-height: 1.4; text-wrap: balance;
+  }
+  .pnchy-status-lead { display: block; font-size: clamp(18px, 5.5vw, 24px); }
+  .pnchy-status-detail {
+    display: block; font-style: normal; font-size: clamp(13px, 3.4vw, 15px);
+    opacity: 0.85; margin-top: 4px; line-height: 1.45;
+  }
+  .pnchy-cursor { display: inline-block; margin-left: 2px; animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 0%, 45% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+  .pnchy-input {
+    width: 100%; background: transparent; border: none; outline: none;
+    text-align: center; font-family: inherit; font-style: italic;
+    font-size: clamp(16px, 4vw, 20px); color: var(--egg-white);
+    -webkit-appearance: none; appearance: none;
+  }
+  /* font-size floors at 16px above — Safari on iOS zooms the page on
+     focus for any input under 16px. */
+  .pnchy-input::placeholder { color: rgba(250,247,242,0.7); }
+
+  .pnchy-panel {
+    border-radius: 0 0 28px 28px; padding: 24px 28px 28px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .pnchy-skeleton-panel { align-items: center; padding: 20px; }
+  .pnchy-sketch-map { width: 100%; max-width: 320px; height: auto; animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+
+  .pnchy-body { font-size: 17px; line-height: 1.5; color: var(--egg-white); margin: 0; text-align: center; text-wrap: balance; }
+  .pnchy-body-strong { font-size: 20px; font-style: italic; }
+  .pnchy-body-small { font-size: 15px; opacity: 0.9; }
+
+  /* Glanceable hierarchy: headline, big live number, small caption —
+     instead of one long sentence read end to end. */
+  .pnchy-headline {
+    font-style: italic; font-weight: 500; font-size: clamp(20px, 5.5vw, 26px);
+    color: var(--egg-white); margin: 0; text-align: center; text-wrap: balance;
+  }
+  .pnchy-stat-row { display: flex; align-items: baseline; justify-content: center; gap: 8px; }
+  .pnchy-stat-number {
+    font-style: normal; font-weight: 600; font-size: clamp(34px, 10vw, 46px);
+    line-height: 1; color: var(--egg-white); font-variant-numeric: tabular-nums;
+  }
+  .pnchy-stat-label { font-style: italic; font-size: 15px; color: var(--egg-white); opacity: 0.85; }
+  .pnchy-caption {
+    font-size: 14px; line-height: 1.45; color: var(--egg-white); text-align: center;
+    margin: 0; max-width: 34ch; margin-left: auto; margin-right: auto; text-wrap: balance;
+  }
+  .pnchy-caption-muted { opacity: 0.72; font-size: 13px; }
+
+  .pnchy-email-input {
+    width: 100%; padding: 12px 16px; border-radius: 999px;
+    border: 1px solid rgba(250,247,242,0.5); background: rgba(250,247,242,0.12);
+    color: var(--egg-white); font-family: inherit; font-size: 16px; outline: none; text-align: center;
+    -webkit-appearance: none; appearance: none;
+  }
+  .pnchy-email-input::placeholder { color: rgba(250,247,242,0.65); }
+
+  .pnchy-hold-btn {
+    position: relative; overflow: hidden; border: none; border-radius: 999px;
+    padding: 16px 30px; background: var(--purple); color: var(--egg-white);
+    font-family: inherit; font-style: italic; font-size: 18px; cursor: pointer;
+    user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;
+    touch-action: none; align-self: center; min-height: 44px;
+  }
+  .pnchy-hold-fill {
+    position: absolute; inset: 0; background: rgba(250,247,242,0.3);
+    transform-origin: left; width: 0%; transition-property: width; transition-timing-function: linear;
+  }
+  .pnchy-hold-label { position: relative; z-index: 1; }
+
+  .pnchy-cta-yellow {
+    align-self: center; padding: 12px 26px; border-radius: 999px;
+    background: var(--yellow); color: var(--purple); font-family: inherit;
+    font-style: italic; font-size: 17px; text-decoration: none; font-weight: 500;
+    border: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation; min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .pnchy-btn-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .pnchy-btn-text {
+    align-self: center; background: none; border: none; color: var(--egg-white);
+    font-family: inherit; font-style: italic; font-size: 15px; text-decoration: underline;
+    cursor: pointer; opacity: 0.85; -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation; padding: 10px 6px; min-height: 44px;
+  }
+  .pnchy-btn-row .pnchy-btn-text { color: var(--ink); }
+
+  /* --- demo-only controls, not part of the widget --- */
+  .demo-controls {
+    margin-top: 48px; max-width: 560px; width: 100%;
+    border-top: 1px dashed rgba(43,36,32,0.25); padding-top: 20px;
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  }
+  .demo-controls button {
+    font-family: system-ui, sans-serif; font-size: 12px; padding: 6px 12px;
+    border-radius: 6px; border: 1px solid rgba(43,36,32,0.3); background: white;
+    cursor: pointer; color: var(--ink);
+  }
+  .demo-label { width: 100%; text-align: center; font-family: system-ui, sans-serif; font-size: 12px; opacity: 0.6; margin-bottom: 4px; }
+  .pnchy-attribution {
+    margin: 8px 0 0; text-align: center; font-family: inherit;
+    font-size: 12px; color: var(--ink); opacity: 0.5;
+  }
+  .pnchy-attribution a { color: inherit; }
+</style>
+</head>
+<body>
+
+  <p class="page-note">Mocked preview — no real Brave/Supabase calls. Type anything and hit Enter,<br>or jump straight to a state below.</p>
+
+  <div class="pnchy-widget-wrap" id="widget">
+    <div class="pnchy-status-bar" id="statusBar"></div>
+    <div id="panelSlot"></div>
+    <p class="pnchy-attribution" id="attribution" style="display: none;">
+      Place data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors
+    </p>
+  </div>
+
+  <div class="demo-controls">
+    <div class="demo-label">demo controls — jump to a state</div>
+    <button onclick="goIdle()">idle</button>
+    <button onclick="goTyping()">typing</button>
+    <button onclick="mockSearch('Test Cafe', true)">checking → petition</button>
+    <button onclick="mockSearch('zzz', false)">checking → unverified</button>
+  </div>
+
+<script>
+  const COLORS = { blue: 'var(--blue)', green: 'var(--green)', purple: 'var(--purple)', red: 'var(--red)', eggWhite: 'var(--egg-white)' };
+  const PROMPTS = ["Find the local business", "halal spots near me", "a barber who does fades", "a bookstore in my neighborhood", "a cafe that's open late"];
+  const GOAL = 1000;
+
+  let state = 'idle';
+  let query = '';
+  let place = null;
+  let mockCount = 214; // just a demo starting number, not real data
+  let holdTimer = null;
+  let holding = false;
+
+  const statusBar = document.getElementById('statusBar');
+  const panelSlot = document.getElementById('panelSlot');
+
+  function render() {
+    const hasPanel = state !== 'idle' && state !== 'typing';
+    document.getElementById('attribution').style.display = hasPanel ? 'block' : 'none';
+    const barColor = state === 'idle' ? 'var(--blue)' : state === 'typing' ? 'var(--green)' : state === 'checking' ? 'var(--purple)' : 'var(--red)';
+    statusBar.style.background = barColor;
+    statusBar.style.borderRadius = hasPanel ? '28px 28px 0 0' : '999px';
+
+    if (state === 'idle') {
+      statusBar.onclick = goTyping;
+      statusBar.innerHTML = `<span class="pnchy-status-text" id="typewriter"></span>`;
+      startTypewriter();
+    } else if (state === 'typing') {
+      statusBar.onclick = null;
+      statusBar.innerHTML = `<input class="pnchy-input" id="queryInput" placeholder="What are you looking for?" />`;
+      const input = document.getElementById('queryInput');
+      input.value = query;
+      input.focus();
+      input.oninput = (e) => query = e.target.value;
+      input.onkeydown = (e) => { if (e.key === 'Enter') mockSearch(query || 'Test Cafe', Math.random() > 0.3); };
+    } else if (state === 'checking') {
+      statusBar.onclick = null;
+      statusBar.innerHTML = `<span class="pnchy-status-text">Searching<span id="dots">...</span></span>`;
+    } else if (state === 'unverified') {
+      statusBar.onclick = null;
+      statusBar.innerHTML = `<span class="pnchy-status-text">Is this a brick and mortar?</span>`;
+    } else {
+      statusBar.onclick = null;
+      statusBar.innerHTML = `<span class="pnchy-status-text"><span class="pnchy-status-lead">Oops.</span><span class="pnchy-status-detail">This business is not in our system. Sign the petition below so we can get this business on Pnchy. Thanks.</span></span>`;
+    }
+
+    renderPanel(hasPanel);
+  }
+
+  function renderPanel(hasPanel) {
+    if (!hasPanel) { panelSlot.innerHTML = ''; return; }
+
+    if (state === 'checking') {
+      panelSlot.innerHTML = `
+        <div class="pnchy-panel pnchy-skeleton-panel" style="background: var(--green)">
+          <svg class="pnchy-sketch-map" viewBox="0 0 240 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="var(--egg-white)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+              <path d="M42 12 L38 138"/><path d="M92 10 L88 140"/><path d="M142 14 L146 136"/><path d="M190 18 L196 132"/>
+              <path d="M14 42 L212 36"/><path d="M10 80 L216 86"/><path d="M18 116 L206 110"/>
+              <path d="M90 34 L144 30 L148 82 L86 86 Z" opacity="0.6"/>
+            </g>
+          </svg>
+        </div>`;
+    } else if (state === 'unverified') {
+      panelSlot.innerHTML = `
+        <div class="pnchy-panel" style="background: var(--egg-white); color: var(--ink);">
+          <p class="pnchy-body" style="color: var(--ink)">We might be mistaken — Pnchy currently only serves businesses with physical locations.</p>
+          <p class="pnchy-caption" style="color: var(--ink)">Get in touch with Pnchy to help get ${query || 'this business'} registered.</p>
+          <a class="pnchy-cta-yellow" href="https://pnchy.framer.website/early-access" target="_blank" rel="noreferrer">Get in Touch</a>
+          <div class="pnchy-btn-row">
+            <button class="pnchy-btn-text" onclick="goTyping()">Try a different search</button>
+          </div>
+        </div>`;
+    } else if (state === 'petition') {
+      panelSlot.innerHTML = `
+        <div class="pnchy-panel" style="background: var(--green)">
+          <p class="pnchy-headline">Get ${place.name} on Pnchy</p>
+          <div class="pnchy-stat-row">
+            <span class="pnchy-stat-number">${mockCount}</span>
+            <span class="pnchy-stat-label">of ${GOAL} signed</span>
+          </div>
+          <p class="pnchy-caption">Reach ${GOAL} and we help convince this business to get on Pnchy.</p>
+          <input type="email" class="pnchy-email-input" id="emailInput" placeholder="you@email.com" autocomplete="email" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false" />
+          <button class="pnchy-hold-btn" id="holdBtn">
+            <span class="pnchy-hold-fill" id="holdFill"></span>
+            <span class="pnchy-hold-label">Press &amp; hold to sign</span>
+          </button>
+          <p class="pnchy-caption pnchy-caption-muted">While you are at it sign up for Pnchy early access so you get first experience of the future of finding local gems.</p>
+          <button class="pnchy-cta-yellow" onclick="alert('Would open your Framer waitlist page.')">Early Access</button>
+          <button class="pnchy-btn-text" onclick="goIdle()">Search again</button>
+        </div>`;
+      wireHoldButton();
+    } else if (state === 'signed') {
+      panelSlot.innerHTML = `
+        <div class="pnchy-panel" style="background: var(--green)">
+          <p class="pnchy-headline">You're signed up.</p>
+          <p class="pnchy-caption">We'll email you when ${place.name} joins Pnchy.</p>
+          <div class="pnchy-stat-row">
+            <span class="pnchy-stat-number">${mockCount}</span>
+            <span class="pnchy-stat-label">of ${GOAL} signed</span>
+          </div>
+          <button class="pnchy-cta-yellow" onclick="alert('Would open your Framer waitlist page.')">Early Access</button>
+          <button class="pnchy-btn-text" onclick="goIdle()">Search again</button>
+        </div>`;
+    }
+  }
+
+  function wireHoldButton() {
+    const btn = document.getElementById('holdBtn');
+    const fill = document.getElementById('holdFill');
+    const HOLD_MS = 5000;
+
+    const start = () => {
+      const email = document.getElementById('emailInput').value;
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Enter a valid email first.'); return; }
+      holding = true;
+      fill.style.transitionDuration = HOLD_MS + 'ms';
+      fill.style.width = '100%';
+      holdTimer = setTimeout(() => {
+        mockCount += 1;
+        state = 'signed';
+        render();
+      }, HOLD_MS);
+    };
+    const cancel = () => {
+      if (!holding) return;
+      holding = false;
+      clearTimeout(holdTimer);
+      fill.style.transitionDuration = '150ms';
+      fill.style.width = '0%';
+    };
+    btn.onpointerdown = start;
+    btn.onpointerup = cancel;
+    btn.onpointerleave = cancel;
+    btn.onpointercancel = cancel;
+  }
+
+  // --- typewriter (idle state) ---
+  let twTimeout = null;
+  function startTypewriter() {
+    clearTimeout(twTimeout);
+    let wordIndex = 0, charIndex = 0, deleting = false;
+    const el = () => document.getElementById('typewriter');
+    function tick() {
+      if (state !== 'idle' || !el()) return;
+      const word = PROMPTS[wordIndex];
+      if (!deleting) {
+        charIndex++;
+        el().innerHTML = word.slice(0, charIndex) + '<span class="pnchy-cursor">|</span>';
+        if (charIndex === word.length) { deleting = true; twTimeout = setTimeout(tick, 1400); return; }
+      } else {
+        charIndex--;
+        el().innerHTML = word.slice(0, charIndex) + '<span class="pnchy-cursor">|</span>';
+        if (charIndex === 0) { deleting = false; wordIndex = (wordIndex + 1) % PROMPTS.length; }
+      }
+      twTimeout = setTimeout(tick, deleting ? 30 : 60);
+    }
+    twTimeout = setTimeout(tick, 400);
+  }
+
+  // --- state transitions (exposed for the demo control buttons) ---
+  function goIdle() { state = 'idle'; query = ''; place = null; render(); }
+  function goTyping() { state = 'typing'; render(); }
+  function mockSearch(name, willVerify) {
+    state = 'checking'; render();
+    setTimeout(() => {
+      if (willVerify) {
+        place = { name: name || 'Test Cafe', address: '123 Example St' };
+        state = 'petition';
+      } else {
+        state = 'unverified';
+      }
+      render();
+    }, 1800);
+  }
+
+  render();
+</script>
+</body>
+</html>

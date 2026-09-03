@@ -1,0 +1,17 @@
+{
+  "name": "pnchy-widget-build",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local-only build project that bundles PnchyBusinessFinder.tsx into a static script for index.html. Not part of the deployed site.",
+  "scripts": {
+    "build": "esbuild build/entry.tsx --bundle --minify --format=iife --outfile=../js/pnchy-widget.bundle.js"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@supabase/supabase-js": "^2.45.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.1"
+  }
+}
