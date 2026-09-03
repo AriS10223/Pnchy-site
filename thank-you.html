@@ -70,8 +70,7 @@
     }
 
     .nav-logo { display: flex; align-items: center; gap: 8px; }
-    .nav-logo img { width: 36px; height: 36px; object-fit: contain; }
-    .nav-logo span { font-family: var(--serif); font-style: italic; font-size: 22px; letter-spacing: -0.03em; }
+    .nav-logo img { height: 64px; width: auto; object-fit: contain; }
 
     .nav-links { display: flex; gap: 8px; }
     .nav-links a {
@@ -129,7 +128,7 @@
     }
 
     @media (max-width: 680px) {
-      body { width: 100vw; height: auto; min-height: 100vh; overflow: visible; padding-top: 80px; padding-bottom: 60px; }
+      body { width: 100vw; height: auto; min-height: 100vh; overflow: visible; padding-top: 96px; padding-bottom: 60px; }
       .line-1, .line-2, .line-3, .thankyou-img {
         position: static;
         display: block;
@@ -139,7 +138,6 @@
         left: auto; top: auto;
       }
       .thankyou-img { height: auto; }
-      .nav-logo span { display: none; }
     }
   </style>
 </head>
@@ -148,8 +146,7 @@
   <!-- NAV -->
   <nav>
     <a href="/" class="nav-logo">
-      <img src="images/New_PNchy_Logo.png" alt="Pnchy" />
-      <span>pnchy</span>
+      <img src="images/pnchy-wordmark.png" alt="Pnchy" />
     </a>
     <div class="nav-links">
       <a href="https://pnchy.framer.website/blog">What are y'all up to?</a>
