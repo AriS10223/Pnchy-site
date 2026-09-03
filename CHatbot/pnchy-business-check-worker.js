@@ -114,7 +114,7 @@ export default {
       )}&lat=${lat ?? "x"}&lng=${lng ?? "x"}`
     );
     const cached = await cache.match(cacheKey);
-    if (cached) return cached;
+    if (cached) return withCorsHeaders(cached, corsHeaders);
 
     try {
       const result = await checkBusiness(name, lat, lng);
@@ -146,7 +146,7 @@ async function handleCity(request, env, ctx, corsHeaders) {
     `https://cache.pnchy-worker.internal/city?lat=${lat.toFixed(2)}&lng=${lng.toFixed(2)}`
   );
   const cached = await cache.match(cacheKey);
-  if (cached) return cached;
+  if (cached) return withCorsHeaders(cached, corsHeaders);
 
   try {
     const city = await reverseGeocodeCity(lat, lng);
@@ -179,6 +179,21 @@ function json(data, status, headers, cacheSeconds) {
   const h = { "Content-Type": "application/json", ...headers };
   if (cacheSeconds) h["Cache-Control"] = `public, max-age=${cacheSeconds}`;
   return new Response(JSON.stringify(data), { status, headers: h });
+}
+
+// Cloudflare's Cache API stores the whole Response, headers included —
+// so a cache entry written while ALLOWED_ORIGIN was still pointed at a
+// dev/localhost value keeps replaying that stale CORS header for up to
+// 24h even after the secret is corrected, silently breaking the site
+// for real visitors (their browser gets back a mismatched
+// Access-Control-Allow-Origin and refuses to expose the response to
+// JS, with no error surfaced anywhere). Re-applying the *current*
+// corsHeaders on every cache hit makes a config change take effect
+// immediately, while still avoiding a live Nominatim call.
+function withCorsHeaders(response, corsHeaders) {
+  const headers = new Headers(response.headers);
+  for (const [key, value] of Object.entries(corsHeaders)) headers.set(key, value);
+  return new Response(response.body, { status: response.status, headers });
 }
 
 async function checkBusiness(name, lat, lng) {
