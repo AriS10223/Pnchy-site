@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Consent Mode (default state) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+    try {
+      if (localStorage.getItem('pnchy_cookie_consent') === 'granted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+    } catch (e) {}
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YKFWY8D4Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7YKFWY8D4Z');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pnchy — Privacy Policy</title>
@@ -84,7 +109,7 @@
     .header-card {
       background: var(--warm);
       border-radius: 16px;
-      padding: 32px 36px;
+      padding: clamp(20px, 6vw, 32px) clamp(20px, 6vw, 36px);
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -99,7 +124,7 @@
 
     .header-card h1 {
       font-family: var(--serif);
-      font-size: 52px;
+      font-size: clamp(30px, 8vw, 52px);
       font-weight: 400;
       color: var(--dark);
       letter-spacing: -0.04em;
@@ -170,9 +195,13 @@
     /* TABLE */
     .table-wrap {
       border-radius: 12px;
-      overflow: hidden;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
       border: 1.5px solid rgba(41,37,35,0.1);
     }
+
+    table { min-width: 480px; }
 
     table {
       width: 100%;
@@ -317,9 +346,11 @@
     .footer-cta a.email-btn:hover { opacity: .8; }
 
     @media (max-width: 600px) {
-      .header-card h1 { font-size: 36px; }
       .reg-grid { grid-template-columns: 1fr; }
       .nav-logo span { display: none; }
+      .page { padding: 72px 16px 100px; }
+      .footer-cta { padding: clamp(20px, 6vw, 28px) clamp(20px, 6vw, 32px); }
+      .section h2 { font-size: 21px; }
     }
   </style>
 </head>
@@ -364,7 +395,7 @@
       <div class="section">
         <h2>Who we are</h2>
         <p>
-          Pnchy is a community loyalty platform that connects local businesses with the neighborhoods they serve. We are headquartered in Boston, Massachusetts. If you have any questions about this Privacy Policy or would like to exercise your rights, please contact us at <a href="mailto:pnchyapp@gmail.com">pnchyapp@gmail.com</a>. We will respond within 30 days.
+          Pnchy is a community loyalty platform that connects local businesses with the neighborhoods they serve. We are headquartered in Boston, Massachusetts. If you have any questions about this Privacy Policy or would like to exercise your rights, please contact us at <a href="mailto:hello@pnchy.app">hello@pnchy.app</a>. We will respond within 30 days.
         </p>
       </div>
 
@@ -517,7 +548,7 @@
           </table>
         </div>
         <p>
-          To exercise any of these rights, please contact <a href="mailto:pnchyapp@gmail.com">pnchyapp@gmail.com</a>. We will respond within 30 days. If you are located in the EU or UK and believe your rights have not been respected, you have the right to lodge a complaint with your local supervisory authority.
+          To exercise any of these rights, please contact <a href="mailto:hello@pnchy.app">hello@pnchy.app</a>. We will respond within 30 days. If you are located in the EU or UK and believe your rights have not been respected, you have the right to lodge a complaint with your local supervisory authority.
         </p>
       </div>
 
@@ -588,7 +619,7 @@
       <div class="footer-cta">
         <h2>Questions or concerns?</h2>
         <p>We are a small team building something real for your neighborhood. If you have any questions about this policy or would like to exercise your privacy rights, please reach out directly.</p>
-        <a href="mailto:pnchyapp@gmail.com" class="email-btn">pnchyapp@gmail.com</a>
+        <a href="mailto:hello@pnchy.app" class="email-btn">hello@pnchy.app</a>
       </div>
 
     </div>
