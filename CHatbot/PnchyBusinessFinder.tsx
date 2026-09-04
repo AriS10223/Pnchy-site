@@ -126,12 +126,24 @@ function useGeolocation() {
     // same tick unless the user changed the permission in Settings
     // first. Without this, that click looks like it does nothing at all.
     setStatus("checking");
+    const startedAt = Date.now();
+    const MIN_CHECKING_MS = 900; // an already-denied permission rejects in
+    // ~0ms (no real lookup happens) — without a floor, "checking" flashes
+    // for a frame or two and is never actually perceived.
+    const settle = (apply: () => void) => {
+      const remaining = MIN_CHECKING_MS - (Date.now() - startedAt);
+      if (remaining > 0) setTimeout(apply, remaining);
+      else apply();
+    };
+
     navigator.geolocation.getCurrentPosition(
       (pos) => {
-        setCoords({ lat: pos.coords.latitude, lng: pos.coords.longitude });
-        setStatus("granted");
+        settle(() => {
+          setCoords({ lat: pos.coords.latitude, lng: pos.coords.longitude });
+          setStatus("granted");
+        });
       },
-      () => setStatus("denied"),
+      () => settle(() => setStatus("denied")),
       { timeout: 6000, maximumAge: 5 * 60 * 1000 }
     );
   }, []);
