@@ -112,13 +112,20 @@ function measureTextWidth(text: string, font: string): number {
 
 function useGeolocation() {
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
-  const [status, setStatus] = useState<"idle" | "granted" | "denied" | "unsupported">("idle");
+  const [status, setStatus] = useState<"idle" | "checking" | "granted" | "denied" | "unsupported">("idle");
 
   const request = useCallback(() => {
     if (!("geolocation" in navigator)) {
       setStatus("unsupported");
       return;
     }
+    // "checking" gives "Try Again" something visible to show while this
+    // resolves — once a site's location permission has been explicitly
+    // denied, browsers (Safari on iOS especially) never re-prompt on
+    // their own, so a retry click will just silently fail again in the
+    // same tick unless the user changed the permission in Settings
+    // first. Without this, that click looks like it does nothing at all.
+    setStatus("checking");
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         setCoords({ lat: pos.coords.latitude, lng: pos.coords.longitude });
@@ -551,9 +558,20 @@ export default function PnchyBusinessFinder({
           <p className="pnchy-caption" style={{ color: COLORS.ink }}>
             Please turn on your location. We only use it to help you find local businesses on Pnchy.
           </p>
-          <button className="pnchy-cta-yellow" onClick={requestLocation}>
-            Try Again
+          <button
+            className="pnchy-cta-yellow"
+            onClick={requestLocation}
+            disabled={locationStatus === "checking"}
+          >
+            {locationStatus === "checking" ? "Checking..." : "Try Again"}
           </button>
+          {locationStatus === "denied" && (
+            <p className="pnchy-caption pnchy-caption-muted" style={{ color: COLORS.ink }}>
+              Still stuck? Once a site's location is denied, your browser won't ask again on its own —
+              you'll need to allow it for this site in your browser or phone's Settings first, then tap
+              Try Again.
+            </p>
+          )}
         </div>
       )}
 
@@ -950,6 +968,10 @@ const WIDGET_CSS = `
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+}
+.pnchy-cta-yellow:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 .pnchy-btn-row {
