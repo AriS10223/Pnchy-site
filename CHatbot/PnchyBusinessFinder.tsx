@@ -448,7 +448,7 @@ export default function PnchyBusinessFinder({
       setSignatureCount((c) => (c ?? 0) + 1);
       setState("signed");
     } catch {
-      setSignError("Something went wrong — try again.");
+      setSignError("Something went wrong. Try again.");
     } finally {
       setHolding(false);
     }
@@ -528,15 +528,14 @@ export default function PnchyBusinessFinder({
         )}
 
         {state === "unverified" && (
-          <span className="pnchy-status-text">Is this a brick and mortar?</span>
+          <span className="pnchy-status-text">Is this a real brick and mortar spot?</span>
         )}
 
         {(state === "petition" || state === "signed") && (
           <span className="pnchy-status-text">
             <span className="pnchy-status-lead">Oops.</span>
             <span className="pnchy-status-detail">
-              This business is not in our system. Sign the petition below so we can get this business on Pnchy.
-              Thanks.
+              This spot isn't on Pnchy yet. Sign below and help us change that.
             </span>
           </span>
         )}
@@ -565,7 +564,7 @@ export default function PnchyBusinessFinder({
       {state === "location-blocked" && (
         <div className="pnchy-panel" style={{ background: COLORS.eggWhite, color: COLORS.ink }}>
           <p className="pnchy-body" style={{ color: COLORS.ink }}>
-            Looks like your location wasn't allowed — we can't help you find local businesses without it.
+            Looks like your location wasn't allowed. We can't help you find local businesses without it.
           </p>
           <p className="pnchy-caption" style={{ color: COLORS.ink }}>
             Please turn on your location. We only use it to help you find local businesses on Pnchy.
@@ -579,8 +578,8 @@ export default function PnchyBusinessFinder({
           </button>
           {locationStatus === "denied" && (
             <p className="pnchy-caption pnchy-caption-muted" style={{ color: COLORS.ink }}>
-              Still stuck? Once a site's location is denied, your browser won't ask again on its own —
-              you'll need to allow it for this site in your browser or phone's Settings first, then tap
+              Still stuck? Once a site's location is denied, your browser won't ask again on its own.
+              You'll need to allow it for this site in your browser or phone's Settings first, then tap
               Try Again.
             </p>
           )}
@@ -590,7 +589,7 @@ export default function PnchyBusinessFinder({
       {state === "cookie-required" && (
         <div className="pnchy-panel" style={{ background: COLORS.eggWhite, color: COLORS.ink }}>
           <p className="pnchy-body" style={{ color: COLORS.ink }}>
-            We can't save your email to sign this without your OK on cookies — that's how we stick to our
+            We can't save your email to sign this without your OK on cookies. That's how we stick to our
             privacy policy.
           </p>
           <p className="pnchy-caption" style={{ color: COLORS.ink }}>
@@ -613,10 +612,10 @@ export default function PnchyBusinessFinder({
       {state === "unverified" && (
         <div className="pnchy-panel" style={{ background: COLORS.eggWhite, color: COLORS.ink }}>
           <p className="pnchy-body" style={{ color: COLORS.ink }}>
-            We might be mistaken — Pnchy currently only serves businesses with physical locations.
+            Pnchy only tracks real foot traffic, so this needs to be an actual brick and mortar spot.
           </p>
           <p className="pnchy-caption" style={{ color: COLORS.ink }}>
-            Get in touch with Pnchy to help get {query.trim() || "this business"} registered.
+            Get in touch and help us get {query.trim() || "this business"} verified and onto the leaderboard.
           </p>
           <a href={earlyAccessUrl} target="_blank" rel="noreferrer" className="pnchy-cta-yellow">
             Get in Touch
@@ -640,7 +639,7 @@ export default function PnchyBusinessFinder({
                 <span className="pnchy-stat-label">of {GOAL_SIGNATURES} signed</span>
               </div>
               <p className="pnchy-caption">
-                Reach {GOAL_SIGNATURES} and we help convince this business to get on Pnchy.
+                Reach {GOAL_SIGNATURES} and we'll pitch {place.name} on Density Drops and a foot traffic leaderboard.
               </p>
 
               <input
@@ -676,8 +675,8 @@ export default function PnchyBusinessFinder({
               {signError && <p className="pnchy-error">{signError}</p>}
 
               <p className="pnchy-caption pnchy-caption-muted">
-                While you are at it sign up for Pnchy early access so you get first experience of the future of
-                finding local gems.
+                While you're here, grab early access. Be first to try friend-only reviews, no strangers,
+                just real recs.
               </p>
 
               <a href={earlyAccessUrl} target="_blank" rel="noreferrer" className="pnchy-cta-yellow">
@@ -691,7 +690,7 @@ export default function PnchyBusinessFinder({
           ) : (
             <>
               <p className="pnchy-headline">You're signed up.</p>
-              <p className="pnchy-caption">We'll email you when {place.name} joins Pnchy.</p>
+              <p className="pnchy-caption">We'll email you the second {place.name} joins, Density Drops and all.</p>
 
               <div className="pnchy-stat-row">
                 <span className="pnchy-stat-number">{signatureCount ?? 0}</span>
@@ -727,10 +726,9 @@ export default function PnchyBusinessFinder({
 // Swap for your own CSS/Tailwind pipeline if you'd rather not inject.
 // ---------------------------------------------------------------
 const WIDGET_CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
-/* Prefer a <link> tag in your document <head> instead of this @import
-   for performance — this is just here so the component works as a
-   true drop-in with zero setup. */
+/* Instrument Serif is loaded via a <link> tag in the host page's <head>
+   (both index.html and petition.html already do this with preconnect) —
+   an @import here would fetch it a second time and delay first render. */
 
 .pnchy-widget-wrap {
   width: 100%;
