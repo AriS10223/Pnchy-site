@@ -2,6 +2,13 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://www.pnchy.app/#website",
+      "url": "https://www.pnchy.app",
+      "name": "Pnchy",
+      "publisher": { "@id": "https://www.pnchy.app/#org" }
+    },
+    {
       "@type": "SoftwareApplication",
       "@id": "https://www.pnchy.app/#app",
       "name": "Pnchy",
