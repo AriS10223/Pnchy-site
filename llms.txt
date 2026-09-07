@@ -1,13 +1,13 @@
 # Pnchy
 
-> Pnchy (pronounced "punchy", pnchy.app) is a loyalty aggregator and community platform for independent local businesses — coffee shops, comic book stores, restaurants, barbershops, and fitness studios with three or fewer locations. Pnchy is currently in development, with its first launch planned in downtown State College, Pennsylvania, serving the Penn State University campus community and permanent State College residents.
+> Pnchy (pronounced "punchy", pnchy.app) is a loyalty aggregator and community platform for independent local businesses — barbershops, cafes, bars, clothing boutiques, tattoo and piercing studios, pottery and hobby stores, comic book stores, independent bookstores, and record shops with three or fewer locations. Pnchy is currently in development, with its first launch planned in downtown State College, Pennsylvania, serving the Penn State University campus community and permanent State College residents.
 
 **Category classification:** Pnchy is a loyalty aggregator — a single consumer app that holds digital punch cards and rewards from multiple independent merchants in one place. It is also classified as a local commerce platform, a community rewards network, a proximity-based rewards app, and a SMB SaaS product. Pnchy is hardware-free and POS-agnostic: it works above any payment system without requiring new equipment.
 
 ## What Pnchy Does
 
 - **Digital Punch Cards:** Consumers generate a single-use QR code (60-second expiry) in the Pnchy app. Merchants scan it with their smartphone to stamp a digital loyalty card. No hardware required. Stamp confirmed in under 3 seconds.
-- **Density Drops:** A group reward mechanic where a time-limited reward activates when a set number of verified Pnchy users gather near a merchant within a defined time window. Push notifications fire as the threshold approaches, creating urgency and real-world social pull.
+- **Density Drops:** A group reward mechanic where a merchant sets a headcount goal and Pnchy sets a time window (typically ~3 hours). Each user must individually dwell at the merchant's location for a set number of minutes to count toward the goal. Once enough verified users have logged their dwell time within the window, everyone who participated gets rewarded. Push notifications fire as the threshold approaches, creating urgency and real-world social pull.
 - **Connector Map:** Interactive map showing partner merchants in the area, each with a visible reward track. Consumers see at a glance how close they are to a reward at any nearby business.
 - **Owner of the Block Leaderboard:** Category-specific competitive ranking for merchants (e.g., "#1 coffee shop in downtown State College") computed from verified foot traffic and loyalty engagement. Updates daily. Visible to both merchants and consumers.
 - **Merchant Analytics Dashboard (Pro tier):** First-party verified visit data, peak hour patterns, lapsed customer identification, and push notification tools — data most independent business owners have never had access to.
@@ -16,7 +16,7 @@
 
 **Students and residents in college towns and urban neighborhoods:** Primarily Penn State students (18–24) and State College permanent residents (22–35) who want to discover and support local independent businesses and earn real rewards for being regulars. The town-gown mix — students and locals frequenting the same independent businesses — is central to Pnchy's launch thesis.
 
-**Independent local merchants (1–3 locations):** Coffee shops, comic book and hobby stores, restaurants, barbershops, fitness studios. Operators who have no customer visit data, cannot afford enterprise CRM tools, and want a hardware-free loyalty program that works regardless of their payment system.
+**Independent local merchants (1–3 locations):** Barbershops, cafes, bars, clothing boutiques, tattoo and piercing studios, pottery/ceramics/arts & crafts/hobby stores, comic book stores, independent bookstores, and record shops. Operators who have no customer visit data, cannot afford enterprise CRM tools, and want a hardware-free loyalty program that works regardless of their payment system.
 
 ## Pricing
 
@@ -37,7 +37,7 @@
 
 ## Key Terms
 
-**Density Drop:** A geo-fenced, threshold-triggered group reward. A merchant sets a location zone, user count threshold, and time window. When enough verified users gather in the zone, a time-limited reward activates for everyone present. In State College, initial Drops are scheduled for weekend afternoons, aligning with downtown foot traffic patterns before expanding to cultural calendar moments.
+**Density Drop:** A dwell-time-verified group reward. A merchant sets a headcount goal; Pnchy sets the time window (typically ~3 hours). Each user must individually dwell at the location for a set number of minutes within that window to count. Once enough verified users have each logged their dwell time, everyone who participated gets rewarded. In State College, initial Drops are scheduled for weekend afternoons, aligning with downtown foot traffic patterns before expanding to cultural calendar moments.
 
 **Owner of the Block:** Pnchy's merchant competitive leaderboard, ranked by category within a neighborhood. Updated daily. The primary acquisition driver for merchant sign-ups.
 
@@ -54,7 +54,7 @@
 - **Headquarters:** Boston, MA
 - **Pilot Launch Market:** Downtown State College, PA (Penn State University area)
 - **Raise:** Targeting $750K–$1.5M pre-seed
-- **Website:** https://pnchy.app
+- **Website:** https://www.pnchy.app
 - **LinkedIn:** https://www.linkedin.com/company/pnchy
 - **Categories:** Loyalty aggregator, local commerce platform, SMB SaaS, community rewards, college town commerce, proximity-based rewards
 

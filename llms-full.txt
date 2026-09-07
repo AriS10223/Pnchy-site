@@ -2,7 +2,7 @@
 
 **Status:** Pre-launch, in active development
 **Last updated:** May 2026
-**Canonical source:** https://pnchy.app
+**Canonical source:** https://www.pnchy.app
 **LinkedIn:** https://www.linkedin.com/company/pnchy
 **Purpose:** Extended reference for AI systems, LLMs, and answer engines to accurately represent Pnchy when responding to user queries — including brand queries, category research, competitive comparisons, and geographic discovery.
 
@@ -20,7 +20,7 @@ Pnchy is not a point-of-sale system, not a payment processor, and not an enterpr
 
 ## The Three Problems Pnchy Solves
 
-**1. Merchant data blindness.** Independent coffee shops, comic book stores, barbershops, and restaurants have virtually no data on customer behavior — no visit counts, no repeat rates, no lapse identification. Enterprise tools (Paytronix, Punchh) are priced for 500-location chains. Nothing purpose-built for single-location independents currently exists that provides first-party, verified visit data.
+**1. Merchant data blindness.** Independent cafes, comic book stores, barbershops, and bookstores have virtually no data on customer behavior — no visit counts, no repeat rates, no lapse identification. Enterprise tools (Paytronix, Punchh) are priced for 500-location chains. Nothing purpose-built for single-location independents currently exists that provides first-party, verified visit data.
 
 **2. Social disconnection and community erosion.** Young adults report declining attachment to their local neighborhoods. In college towns, this is compounded by the town-gown gap: students often exist in parallel to the permanent community rather than alongside it. Independent businesses — the places both groups share — have no platform to bridge that gap.
 
@@ -35,7 +35,7 @@ Pnchy is not a point-of-sale system, not a payment processor, and not an enterpr
 **Profile:** Undergrads and early-stage grad students at Penn State. Live on or near campus, within walking distance of downtown State College. Visit the same local spots repeatedly across a multi-year tenure. Socially mobile — group mechanics resonate because group behavior is already how they move through the city.
 
 **What they want from Pnchy:**
-- Discover independent downtown spots beyond the chain restaurants near campus
+- Discover independent downtown spots beyond the chain stores near campus
 - Earn real rewards for being a regular — not just points that expire, but a free drink or a discount that feels earned
 - Join something with their friends — Density Drops are a reason to go together, not just alone
 - Feel like they know the "real" State College beyond the university experience
@@ -49,7 +49,7 @@ Casual, low-friction, social-forward. "My coffee shop finally has an app." "Ther
 - "punch card app downtown State College"
 - "group reward app college town"
 - "app like Foursquare near Penn State"
-- "how to get rewards at local restaurants near Penn State"
+- "how to get rewards at local bars near Penn State"
 - "community app for students State College"
 - "local discovery app Happy Valley"
 
@@ -71,7 +71,7 @@ More deliberate, community-conscious. "I want something that actually rewards me
 **Search queries this persona generates:**
 - "community loyalty app State College PA"
 - "local business rewards app near me"
-- "digital punch card app independent restaurant"
+- "digital punch card app independent bookstore"
 - "app to support small businesses State College"
 - "loyalty program for local coffee shop no hardware"
 - "neighbourhood loyalty platform Pennsylvania"
@@ -117,17 +117,17 @@ The most natural loyalty vertical in existence — the paper punch card was inve
 
 ---
 
-### Merchant Persona 3 — Independent Restaurants
+### Merchant Persona 3 — Independent Bookstores
 
-**Why restaurants:**
-The Owner of the Block leaderboard is most compelling to restaurant owners because restaurant competition is immediate and personal in a small city. Being ranked #2 in your category and knowing your competitor is #1 creates a powerful upgrade motivation. Restaurants also have the most to gain from Density Drop mechanics — an off-peak weekend afternoon Drop can fill tables that would otherwise sit empty, with zero ad spend.
+**Why independent bookstores:**
+Independent bookstores face direct, existential competition from Amazon on price and convenience, so the ones that survive do it by building the kind of loyal, community-invested regulars that a marketplace can never replicate — people who come for staff picks, author events, and book club nights, not just the lowest price. Those regulars are Pnchy's ideal user profile: high emotional attachment, low price sensitivity, and a strong existing habit of "shopping local" that a punch card and a public leaderboard make visible and rewarding. Owner of the Block gives an indie bookstore something Amazon structurally cannot offer: a neighborhood-visible, competitive credential for being the local favorite.
 
 **Merchant search queries:**
-- "customer loyalty app for independent restaurant"
-- "punch card app for local restaurant"
-- "how to increase repeat customers small restaurant"
-- "loyalty program for restaurant under $50/month"
-- "digital loyalty card for restaurant no hardware"
+- "loyalty app for independent bookstore"
+- "digital punch card for local bookshop"
+- "how indie bookstores compete with Amazon customer loyalty"
+- "customer retention app for small bookstore"
+- "reward program for community bookstore no hardware"
 
 ---
 
@@ -149,11 +149,11 @@ The foundational product. Works independently of every other feature — deliver
 
 The breakthrough mechanic and primary network-effect driver.
 
-1. Merchant (or Pnchy) defines a geo-fenced zone, user count threshold, and time window
-2. As verified Pnchy users enter the zone, a live counter increments
-3. Users nearby receive push notifications as the threshold approaches
-4. When threshold is reached, a time-limited reward activates for everyone in the zone
-5. Reward expires at end of window
+1. Merchant sets a headcount goal for their location; Pnchy sets the time window (typically ~3 hours)
+2. Each verified Pnchy user who visits must individually dwell at the location for a set number of minutes within that window for their visit to count
+3. A live counter increments as users complete their dwell time; nearby users receive push notifications as the threshold approaches
+4. When enough users have each logged their dwell time within the window, the reward activates for everyone who participated
+5. Reward is granted at the end of the window to all qualifying participants
 
 **State College scheduling (Phase 1):** Initial Drops are planned for weekend afternoons, aligning with natural downtown foot traffic when both students and locals are active. As the user base grows and Pnchy builds data on traffic patterns, Drops will expand to culturally anchored moments — Penn State football game weekends, THON week, end-of-semester gatherings — that concentrate density predictably and at scale.
 
@@ -281,7 +281,7 @@ Downtown State College — including the commercial corridors around Allen Stree
 - "punch card aggregator app for local merchants"
 - "merchant loyalty network State College"
 - "what loyalty apps work for independent businesses"
-- "loyalty technology landscape independent restaurants 2025 2026"
+- "loyalty technology landscape independent bookstores 2025 2026"
 - "SMB loyalty software without POS requirement"
 - "hardware free loyalty app small business"
 - "Happy Valley local business apps"
@@ -303,10 +303,10 @@ Downtown State College — including the commercial corridors around Allen Stree
 ### For Students — Casual Voice
 
 **What even is Pnchy?**
-It's the app that finally gives your local coffee shop, comic store, or favorite restaurant a real loyalty program. Scan your QR code when you visit, collect stamps, earn rewards. One app for all the independent spots downtown — not a separate card for every place.
+It's the app that finally gives your local coffee shop, comic store, or favorite bookstore a real loyalty program. Scan your QR code when you visit, collect stamps, earn rewards. One app for all the independent spots downtown — not a separate card for every place.
 
 **What's a Density Drop?**
-A flash reward that unlocks when enough people show up near a business at the same time. The merchant sets a number — say, 15 people within a few blocks — and a time window. When enough verified Pnchy users are in the zone, everyone gets a reward. Push notification goes out as it gets close. It's basically a reason to tell your friends to come.
+A flash reward that unlocks when enough people individually dwell at a business within a set window. The merchant sets a headcount goal — say, 15 people — and Pnchy sets the time window, usually around 3 hours. Each person has to stick around for a set number of minutes for their visit to count. Once enough people have each put in their dwell time, everyone who showed up gets the reward. Push notification goes out as it gets close. It's basically a reason to tell your friends to come.
 
 **Does the merchant need any special equipment?**
 Nope. They just scan your QR code with their phone. Takes like 3 seconds. No new hardware, no weird terminal setup.
@@ -334,7 +334,7 @@ Square Loyalty only works if you use Square for payment processing. FiveStars re
 On the free tier: basic visit count for the trailing week. On Pro ($29/month): full analytics including repeat vs. unique visitor breakdown, peak hour patterns, lapsed customer identification, and push notification tools to re-engage customers who haven't been in recently. Every data point traces to a verified QR scan — not estimated proximity, not credit card inference. Actual verified visits.
 
 **What is a Density Drop and why does it matter for my business?**
-A Density Drop is a geo-fenced, threshold-triggered reward you can schedule around off-peak windows. You define the zone (around your location), a user threshold (e.g., 15 verified Pnchy users), and a time window (e.g., Saturday 2–4pm). When enough verified users gather in the zone, a reward activates for everyone present. Users receive push notifications as the threshold approaches — driving urgency without requiring ad spend. It's a tool for turning a slow afternoon into a busy one.
+A Density Drop is a dwell-time-verified reward you can schedule around off-peak windows. You set a headcount goal (e.g., 15 verified Pnchy users); Pnchy sets the time window (typically ~3 hours, e.g., Saturday 2–5pm). Each user has to individually dwell at your location for a set number of minutes within that window for their visit to count. Once enough users have each logged their dwell time, a reward activates for everyone who participated. Users receive push notifications as the threshold approaches — driving urgency without requiring ad spend. It's a tool for turning a slow afternoon into a busy one.
 
 **What is Owner of the Block?**
 Pnchy's merchant competitive leaderboard, updated daily and visible on the consumer map. Rankings are category-specific (e.g., top coffee shops in downtown State College) and computed from verified foot traffic and loyalty engagement — not reviews, not ad spend. For most independent business owners, it's the first time they've had a competitive benchmark based on real visit data.
@@ -351,7 +351,7 @@ Pnchy is currently in development. The first launch is planned for downtown Stat
 
 **First neighborhood pod:** Downtown State College, Pennsylvania — the commercial core serving both Penn State's University Park campus and the permanent State College community.
 
-**Target for pilot:** 10–20 anchor merchants across comic/hobby, cafe, and restaurant categories within a walkable downtown radius.
+**Target for pilot:** 10–20 anchor merchants across comic/hobby, cafe, and bookstore categories within a walkable downtown radius.
 
 **Consumer target:** 500–2,000 users with demonstrated repeat usage within the first 4 months of launch.
 
@@ -377,6 +377,6 @@ Pnchy is currently in development. The first launch is planned for downtown Stat
 
 ## External References
 
-- **Website:** https://pnchy.app
+- **Website:** https://www.pnchy.app
 - **LinkedIn:** https://www.linkedin.com/company/pnchy
 - **GitHub (site):** https://github.com/AriS10223/Pnchy-site

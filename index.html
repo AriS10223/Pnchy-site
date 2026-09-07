@@ -28,8 +28,21 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pnchy</title>
-  <meta name="description" content="Where Communities Unlock Rewards." />
+  <!-- Title/meta hand-edited for SEO — note before next Framer re-export -->
+  <title>Pnchy: Nominate Your Local Shop, Unlock Community Rewards</title>
+  <meta name="description" content="Nominate your favorite local shop for Pnchy's community loyalty app: digital punch cards, neighborhood leaderboards & group rewards. Sign the petition." />
+  <link rel="canonical" href="https://www.pnchy.app/" />
+  <!-- Open Graph / Twitter Card (hand-added — none existed before) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Pnchy" />
+  <meta property="og:url" content="https://www.pnchy.app/" />
+  <meta property="og:title" content="Pnchy: Nominate Your Local Shop, Unlock Community Rewards" />
+  <meta property="og:description" content="Nominate your favorite local shop for Pnchy's community loyalty app: digital punch cards, neighborhood leaderboards & group rewards. Sign the petition." />
+  <meta property="og:image" content="https://framerusercontent.com/images/6o61KDIjea0Wf97WE4S7dr7yqM.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pnchy: Nominate Your Local Shop, Unlock Community Rewards" />
+  <meta name="twitter:description" content="Nominate your favorite local shop for Pnchy's community loyalty app: digital punch cards, neighborhood leaderboards & group rewards. Sign the petition." />
+  <meta name="twitter:image" content="https://framerusercontent.com/images/6o61KDIjea0Wf97WE4S7dr7yqM.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -41,10 +54,10 @@
     "@graph": [
       {
         "@type": "SoftwareApplication",
-        "@id": "https://pnchy.app/#app",
+        "@id": "https://www.pnchy.app/#app",
         "name": "Pnchy",
         "alternateName": ["Punchy", "Pnchy App", "Pnchy Loyalty", "Pnchy Aggregator"],
-        "url": "https://pnchy.app",
+        "url": "https://www.pnchy.app",
         "applicationCategory": "BusinessApplication",
         "applicationSubCategory": [
           "Loyalty Program Software",
@@ -52,7 +65,7 @@
           "Community Rewards Network"
         ],
         "operatingSystem": ["iOS", "Android"],
-        "description": "Pnchy is a loyalty aggregator and community platform for independent local businesses — coffee shops, comic book stores, restaurants, and barbershops with 1–3 locations. It connects consumers and merchants through digital punch cards verified by QR code, a live discovery map, and Density Drops: group-triggered rewards that activate when enough verified users gather near a participating merchant. Hardware-free, payment-agnostic, and starts free for merchants. Currently in development with a planned launch in downtown State College, PA.",
+        "description": "Pnchy is a loyalty aggregator and community platform for independent local businesses — barbershops, cafes, bars, clothing boutiques, tattoo and piercing studios, pottery and hobby stores, comic book stores, independent bookstores, and record shops with 1–3 locations. It connects consumers and merchants through digital punch cards verified by QR code, a live discovery map, and Density Drops: group-triggered rewards that activate when enough verified users gather near a participating merchant. Hardware-free, payment-agnostic, and starts free for merchants. Currently in development with a planned launch in downtown State College, PA.",
         "featureList": [
           "Digital punch cards with single-use QR verification (60-second expiry)",
           "Density Drops — geo-fenced group rewards triggered by verified user count thresholds",
@@ -91,14 +104,14 @@
         ],
         "targetAudience": {
           "@type": "Audience",
-          "audienceType": "Independent local business owners (1–3 locations): coffee shops, comic book stores, restaurants, barbershops, fitness studios, local retail. Consumer audience: Penn State students and State College residents in the downtown State College area."
+          "audienceType": "Independent local business owners (1–3 locations): barbershops, cafes, bars, clothing boutiques, tattoo and piercing studios, pottery/ceramics/arts & crafts/hobby stores, comic book stores, independent bookstores, and record shops. Consumer audience: Penn State students and State College residents in the downtown State College area."
         }
       },
       {
         "@type": "Organization",
-        "@id": "https://pnchy.app/#org",
+        "@id": "https://www.pnchy.app/#org",
         "name": "Pnchy",
-        "url": "https://pnchy.app",
+        "url": "https://www.pnchy.app",
         "sameAs": [
           "https://www.linkedin.com/company/pnchy",
           "https://github.com/AriS10223/Pnchy-site"
@@ -146,14 +159,38 @@
       },
       {
         "@type": "FAQPage",
-        "@id": "https://pnchy.app/#faq",
+        "@id": "https://www.pnchy.app/#faq",
         "mainEntity": [
           {
             "@type": "Question",
             "name": "What is Pnchy?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pnchy is a loyalty aggregator and community platform for independent local businesses — coffee shops, comic book stores, restaurants, and barbershops with 1–3 locations. Consumers collect digital punch card stamps across multiple local merchants in one app and participate in Density Drops: group rewards that activate when enough verified users gather near a business. Hardware-free, starts free for merchants. Currently in development, launching in downtown State College, PA."
+              "text": "Pnchy is the app that turns your regulars into your best marketing. One digital punch card for every local spot you love: barbershops, cafes, bars, comic shops, record stores, and more. Real rewards for actually showing up. No app-hopping between five different loyalty apps, no plastic card you lose in a drawer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a digital punch card app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Same idea as the paper card taped to the register, minus the paper. Scan a QR code at checkout, get stamped, watch your reward bar fill up. Merchants can optionally use that same QR to process the transaction too, no need to rip out an existing POS system if you'd rather keep it. It's instant, it can't be faked or photocopied, and it's not getting lost in the bottom of your bag."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does this help small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most independent shops have zero idea who their regulars are, or when a regular quietly turns into a one-time visit. That's expensive: Harvard Business Review found that boosting customer retention by just 5% can lift profits 25 to 95%, since keeping a regular costs far less than chasing a new customer. It's bigger than any one shop, too. Small businesses generate 44% of all U.S. economic activity, according to the Small Business Administration. They're the actual pillar of a neighborhood, not just a stat. Pnchy gives owners real visit data, automatic pings to win back lapsed customers, and a loyalty program that actually feels rewarding. No hardware to buy, no POS system to switch, free to start."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is Pnchy different from points-based loyalty systems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Points systems make you do math to feel rewarded, and most people quit before it pays off. McKinsey research found that 77% of points-based loyalty programs fail within two years because they're just not compelling enough to keep people engaged. Pnchy is visit-based and social instead. You're not collecting points in a vacuum, you're climbing a neighborhood leaderboard and unlocking group rewards with other regulars. It's giving community, not spreadsheet."
             }
           },
           {
@@ -161,55 +198,23 @@
             "name": "What is a Density Drop?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A Density Drop is a geo-fenced, threshold-triggered group reward. A merchant defines a location zone, a user count threshold (e.g., 15 people), and a time window. When enough verified Pnchy users gather in the zone, a time-limited reward activates for everyone present. Users receive push notifications as the threshold approaches, creating urgency and social pull without ad spend."
+              "text": "A Density Drop is a reward that unlocks when enough people individually put in the time. A merchant sets the headcount goal, Pnchy sets the time window (usually around 3 hours), and each person has to dwell in the spot for a set number of minutes to count. Once enough people have clocked their dwell time within that window, everyone who showed up gets rewarded. Flash-mob energy, but it's just your favorite comic book store on a Wednesday."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Pnchy available to download?",
+            "name": "Why are we ditching reviews for discovery and using foot-traffic leaderboards paired with friend-only reviews?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pnchy is currently in development. The app is not yet available on the App Store or Google Play. A launch is planned for downtown State College, Pennsylvania. Visit pnchy.app for updates."
+              "text": "Star ratings are broken. Anyone can leave five stars without ever walking through the door, and it's such a widespread problem that the FTC finalized a federal rule in 2024 banning fake reviews and testimonials outright. Pnchy ranks spots by verified foot traffic instead: real people, physically showing up, over and over. And the only opinions you actually see are from friends you trust, not strangers with an agenda, which lines up with Nielsen's research that 92% of people trust recommendations from friends and family over any form of advertising. Discovery should feel like a recommendation from your group chat, not a coin flip."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Pnchy free for merchants?",
+            "name": "How do I get my favorite local shop onto Pnchy?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. The Starter tier is permanently free and includes digital punch cards, basic visit tracking, and map listing. Paid tiers start at $29/month for analytics, push notifications, and custom rewards."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does Pnchy require hardware?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Merchants use their existing smartphone camera to scan customer QR codes. No tablet, terminal, or hardware purchase is required."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How is Pnchy different from Square Loyalty or FiveStars?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Pnchy is payment-agnostic — it works above any payment system without requiring merchants to switch processors. Square Loyalty only works within the Square ecosystem; FiveStars requires joining SumUp's network. Pnchy also offers features unavailable on those platforms: a community discovery map, a competitive merchant leaderboard (Owner of the Block), and Density Drops (group-triggered rewards)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are there any loyalty apps or loyalty aggregators in State College PA?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Pnchy (pnchy.app) is a loyalty aggregator currently in development and planned to launch in downtown State College, PA — serving both Penn State students and permanent State College residents. No other loyalty aggregator is currently active in the State College market as of 2025–2026."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is Owner of the Block?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Owner of the Block is Pnchy's merchant competitive leaderboard. It ranks merchants by category within a neighborhood (e.g., top coffee shops in State College) based on verified foot traffic and loyalty engagement. Rankings update daily and are visible to both merchants and consumers on the Connector Map."
+              "text": "Search for them in the widget above or on our petition page and sign. That's your nomination. Once enough people ask for the same business, we reach out directly to bring them onboard. The petition is literally how we decide who gets onto Pnchy first."
             }
           }
         ]
@@ -234,6 +239,8 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html { scroll-behavior: smooth; }
+
     body {
       background: var(--bg);
       color: var(--dark);
@@ -250,7 +257,7 @@
       z-index: 100;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: space-between;
       padding: 12px 24px;
       background: transparent;
     }
@@ -359,6 +366,7 @@
       min-width: 280px;
       max-width: 546px;
       font-family: var(--serif);
+      font-weight: normal;
       font-size: clamp(20px, 2.6vw, 36px);
       line-height: 1.1;
       letter-spacing: -0.04em;
@@ -507,6 +515,72 @@
       font-family: var(--serif); font-weight: 400;
       font-size: clamp(20px, 2vw, 28px);
       letter-spacing: -0.04em; line-height: 1.2; color: var(--dark);
+    }
+
+    /* ── FAQ (hand-added for SEO — visible content matching the FAQPage schema) ── */
+    .faq-section {
+      background: var(--bg);
+      padding: 70px 20px;
+      display: flex; flex-direction: column;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .faq-heading {
+      font-family: var(--serif); font-style: italic; font-weight: 400;
+      font-size: clamp(26px, 4vw, 44px);
+      letter-spacing: -0.04em; line-height: 1.1;
+      text-align: center; color: var(--dark);
+      max-width: 600px;
+    }
+
+    .faq-list {
+      width: 720px; max-width: 100%;
+      display: flex; flex-direction: column;
+    }
+
+    /* Each question is assigned one of Pnchy's five theme accent colors,
+       cycling in order — same palette used by the circles/cards above. */
+    .faq-item:nth-of-type(5n+1) { --accent: var(--red); }
+    .faq-item:nth-of-type(5n+2) { --accent: var(--yellow); }
+    .faq-item:nth-of-type(5n+3) { --accent: var(--green); }
+    .faq-item:nth-of-type(5n+4) { --accent: var(--blue); }
+    .faq-item:nth-of-type(5n+5) { --accent: var(--purple); }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(61, 53, 48, 0.15);
+      padding: 0 4px;
+    }
+    .faq-item:first-child { border-top: 1px solid rgba(61, 53, 48, 0.15); }
+
+    .faq-question {
+      font-family: var(--serif); font-size: clamp(18px, 2.2vw, 24px);
+      letter-spacing: -0.03em; color: var(--dark);
+      cursor: pointer; list-style: none;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      transition: color .15s ease;
+      /* padding (not just the outer .faq-item) so the tap target itself is ~48px+ tall on mobile */
+      padding: 16px 0;
+      min-height: 44px;
+    }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question::after {
+      content: '+'; flex-shrink: 0;
+      font-family: var(--sans); font-size: 22px; color: var(--gray);
+      transition: transform .2s ease, color .15s ease;
+    }
+    .faq-item[open] .faq-question::after { transform: rotate(45deg); }
+    .faq-question:hover,
+    .faq-question:hover::after,
+    .faq-item[open] .faq-question,
+    .faq-item[open] .faq-question::after {
+      color: var(--accent);
+    }
+
+    .faq-answer {
+      font-family: var(--sans); font-size: 15px; line-height: 1.6;
+      color: var(--dark); max-width: 640px;
+      padding-bottom: 20px;
     }
 
     /* ── ARTICLES ── */
@@ -709,7 +783,13 @@
   <nav>
     <div class="nav-links">
       <a href="https://pnchy.framer.website/early-access" class="pill-dark">Early Access</a>
-      <a href="https://pnchy.framer.website/blog" class="pill-light">Wait, What Do You Do?</a>
+      <a href="https://pnchy.framer.website/blog" class="pill-light">What is Pnchy up to?</a>
+    </div>
+    <div class="nav-links">
+      <!-- scrolls to the on-page FAQ instead of navigating away -->
+      <a href="#faq-section" class="pill-light faq-scroll-link">Wait, What Do You Do?</a>
+      <!-- hand-added internal link so Google can discover /petition -->
+      <a href="/petition" class="pill-light">Nominate Your Shop</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
       <span></span><span></span><span></span>
@@ -720,7 +800,9 @@
     <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Close menu">&times;</button>
     <div class="nav-drawer-links">
       <a href="https://pnchy.framer.website/early-access">Early Access</a>
-      <a href="https://pnchy.framer.website/blog">Wait, What Do You Do?</a>
+      <a href="/petition">Nominate Your Shop</a>
+      <a href="https://pnchy.framer.website/blog">What is Pnchy up to?</a>
+      <a href="#faq-section" class="faq-scroll-link">Wait, What Do You Do?</a>
       <a href="/privacy">Privacy</a>
       <a href="/404">Sike</a>
     </div>
@@ -730,8 +812,9 @@
   <section class="hero">
     <img class="hero-bg-img"
       src="https://framerusercontent.com/images/6o61KDIjea0Wf97WE4S7dr7yqM.png"
-      alt="Pnchy" />
-    <div class="hero-headline">Where Communities Unlock Rewards.</div>
+      alt="Pnchy" width="500" height="200" fetchpriority="high" />
+    <!-- was a <div>; changed to <h1> for SEO (no h1 previously existed on this page) -->
+    <h1 class="hero-headline">Where Communities Unlock Rewards.</h1>
   </section>
 
   <!-- BUSINESS FINDER WIDGET -->
@@ -750,15 +833,15 @@
   <div class="circles-wrap">
     <div class="circles">
       <div class="circle-col">
-        <img class="ci" src="images/circle-map.png" alt="Discover Local" />
+        <img class="ci" src="images/circle-map.jpg" alt="Discover Local" width="700" height="700" loading="lazy" />
         <span class="cl" style="color: var(--red);">Discover Local</span>
       </div>
       <div class="circle-col">
-        <img class="ci" src="images/circle-scan.png" alt="Feel Local" />
+        <img class="ci" src="images/circle-scan.jpg" alt="Feel Local" width="700" height="700" loading="lazy" />
         <span class="cl" style="color: var(--green);">Feel Local</span>
       </div>
       <div class="circle-col">
-        <img class="ci" src="images/circle-stamp.jpg" alt="Return Local" />
+        <img class="ci" src="images/circle-stamp.jpg" alt="Return Local" width="700" height="700" loading="lazy" />
         <span class="cl" style="color: var(--blue);">Return Local</span>
       </div>
     </div>
@@ -773,7 +856,8 @@
       <div class="card">
         <img class="cp"
           src="images/app-leaderboard.png"
-          alt="" />
+          alt="Pnchy app screenshot of the Owner of the Block neighborhood leaderboard ranking local businesses"
+          width="384" height="680" loading="lazy" />
         <div class="card-bottom">
           <div class="card-italic">Show up more. The Spot is yours</div>
           <div class="card-heading">Own Your Block</div>
@@ -784,7 +868,8 @@
       <div class="card">
         <img class="cp"
           src="images/app-drops.png"
-          alt="" />
+          alt="Pnchy app screenshot of a Density Drop group reward unlocking at a local business"
+          width="384" height="550" loading="lazy" />
         <div class="card-bottom">
           <div class="card-italic">Get people. Unlock something special.</div>
           <div class="card-heading">Something Just Dropped</div>
@@ -795,7 +880,8 @@
       <div class="card">
         <img class="cp"
           src="images/app-map.png"
-          alt="" />
+          alt="Pnchy app screenshot of the Connector Map showing nearby local businesses and reward tracks"
+          width="386" height="689" loading="lazy" />
         <div class="card-bottom">
           <div class="card-italic">Spots your neighborhoods are hitting up.</div>
           <div class="card-heading">Discover What's Hot</div>
@@ -805,19 +891,62 @@
     </div>
   </div>
 
+  <!-- FAQ (hand-added for SEO — mirrors the FAQPage JSON-LD above, visible content Google/AI can actually read) -->
+  <section class="faq-section" id="faq-section">
+    <h2 class="faq-heading">Wait, what do you actually do?</h2>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary class="faq-question">What is Pnchy?</summary>
+        <p class="faq-answer">Pnchy is the app that turns your regulars into your best marketing. One digital punch card for every local spot you love: barbershops, cafes, bars, comic shops, record stores, and more. Real rewards for actually showing up. No app-hopping between five different loyalty apps, no plastic card you lose in a drawer.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">What is a digital punch card app?</summary>
+        <p class="faq-answer">Same idea as the paper card taped to the register, minus the paper. Scan a QR code at checkout, get stamped, watch your reward bar fill up. Merchants can optionally use that same QR to process the transaction too, no need to rip out an existing POS system if you'd rather keep it. It's instant, it can't be faked or photocopied, and it's not getting lost in the bottom of your bag.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How does this help small businesses?</summary>
+        <p class="faq-answer">Most independent shops have zero idea who their regulars are, or when a regular quietly turns into a one-time visit. That's expensive: Harvard Business Review found that boosting customer retention by just 5% can lift profits 25 to 95%, since keeping a regular costs far less than chasing a new customer. It's bigger than any one shop, too. Small businesses generate 44% of all U.S. economic activity, according to the Small Business Administration. They're the actual pillar of a neighborhood, not just a stat. Pnchy gives owners real visit data, automatic pings to win back lapsed customers, and a loyalty program that actually feels rewarding. No hardware to buy, no POS system to switch, free to start.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How is Pnchy different from points-based loyalty systems?</summary>
+        <p class="faq-answer">Points systems make you do math to feel rewarded, and most people quit before it pays off. McKinsey research found that 77% of points-based loyalty programs fail within two years because they're just not compelling enough to keep people engaged. Pnchy is visit-based and social instead. You're not collecting points in a vacuum, you're climbing a neighborhood leaderboard and unlocking group rewards with other regulars. It's giving community, not spreadsheet.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">What is a Density Drop?</summary>
+        <p class="faq-answer">A Density Drop is a reward that unlocks when enough people individually put in the time. A merchant sets the headcount goal, Pnchy sets the time window (usually around 3 hours), and each person has to dwell in the spot for a set number of minutes to count. Once enough people have clocked their dwell time within that window, everyone who showed up gets rewarded. Flash-mob energy, but it's just your favorite comic book store on a Wednesday.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Why are we ditching reviews for discovery and using foot-traffic leaderboards paired with friend-only reviews?</summary>
+        <p class="faq-answer">Star ratings are broken. Anyone can leave five stars without ever walking through the door, and it's such a widespread problem that the FTC finalized a federal rule in 2024 banning fake reviews and testimonials outright. Pnchy ranks spots by verified foot traffic instead: real people, physically showing up, over and over. And the only opinions you actually see are from friends you trust, not strangers with an agenda, which lines up with Nielsen's research that 92% of people trust recommendations from friends and family over any form of advertising. Discovery should feel like a recommendation from your group chat, not a coin flip.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How do I get my favorite local shop onto Pnchy?</summary>
+        <p class="faq-answer">Search for them in the widget above or on our <a href="/petition" style="text-decoration: underline;">petition page</a> and sign. That's your nomination. Once enough people ask for the same business, we reach out directly to bring them onboard. The petition is literally how we decide who gets onto Pnchy first.</p>
+      </details>
+
+    </div>
+  </section>
+
   <!-- ARTICLES -->
   <div class="articles-wrap">
     <div class="articles">
       <a href="https://pnchy.framer.website/articles/the-logo" class="art-link">
         <img class="art-thumb"
           src="https://framerusercontent.com/images/8TCrkD4UvFB3xsPWmE84W0FXSE.jpg"
-          alt="" />
+          alt="" width="30" height="30" loading="lazy" />
         <span class="art-title">The Logo That Took a Polar Express Ticket to Get Right</span>
       </a>
       <a href="https://pnchy.framer.website/articles/why-are-we-doing-this" class="art-link">
         <img class="art-thumb"
           src="https://framerusercontent.com/images/ghn7BpJxL1vJj53HnAi8OFbjs.jpg"
-          alt="" />
+          alt="" width="30" height="30" loading="lazy" />
         <span class="art-title">Why are we doing this?</span>
       </a>
     </div>
@@ -837,7 +966,7 @@
     <div class="footer-inner">
       <img class="footer-logo-img"
         src="images/New_PNchy_Logo.png"
-        alt="Pnchy" />
+        alt="Pnchy" width="53" height="53" loading="lazy" />
       <div class="footer-links">
         <a href="https://pnchy.framer.website/early-access" class="footer-link">Sign Up</a>
         <a href="https://pnchy.framer.website/blog" class="footer-link">What are y'all up to?</a>
@@ -884,6 +1013,15 @@
       closeBtn.addEventListener('click', closeDrawer);
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeDrawer();
+      });
+
+      // "Wait, What Do You Do?" now scrolls to the on-page FAQ instead of navigating away
+      document.querySelectorAll('.faq-scroll-link').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          closeDrawer();
+          document.getElementById('faq-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
       });
     })();
   </script>

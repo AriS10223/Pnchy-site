@@ -3,10 +3,10 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "@id": "https://pnchy.app/#app",
+      "@id": "https://www.pnchy.app/#app",
       "name": "Pnchy",
       "alternateName": ["Punchy", "Pnchy App", "Pnchy Loyalty", "Pnchy Aggregator"],
-      "url": "https://pnchy.app",
+      "url": "https://www.pnchy.app",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": [
         "Loyalty Program Software",
@@ -14,7 +14,7 @@
         "Community Rewards Network"
       ],
       "operatingSystem": ["iOS", "Android"],
-      "description": "Pnchy is a loyalty aggregator and community platform for independent local businesses — coffee shops, comic book stores, restaurants, and barbershops with 1–3 locations. It connects consumers and merchants through digital punch cards verified by QR code, a live discovery map, and Density Drops: group-triggered rewards that activate when enough verified users gather near a participating merchant. Hardware-free, payment-agnostic, and starts free for merchants. Currently in development with a planned launch in downtown State College, PA.",
+      "description": "Pnchy is a loyalty aggregator and community platform for independent local businesses — barbershops, cafes, bars, clothing boutiques, tattoo and piercing studios, pottery and hobby stores, comic book stores, independent bookstores, and record shops with 1–3 locations. It connects consumers and merchants through digital punch cards verified by QR code, a live discovery map, and Density Drops: group-triggered rewards that activate when enough verified users gather near a participating merchant. Hardware-free, payment-agnostic, and starts free for merchants. Currently in development with a planned launch in downtown State College, PA.",
       "featureList": [
         "Digital punch cards with single-use QR verification (60-second expiry)",
         "Density Drops — geo-fenced group rewards triggered by verified user count thresholds",
@@ -53,14 +53,14 @@
       ],
       "targetAudience": {
         "@type": "Audience",
-        "audienceType": "Independent local business owners (1–3 locations): coffee shops, comic book stores, restaurants, barbershops, fitness studios, local retail. Consumer audience: Penn State students and State College residents in the downtown State College area."
+        "audienceType": "Independent local business owners (1–3 locations): barbershops, cafes, bars, clothing boutiques, tattoo and piercing studios, pottery/ceramics/arts & crafts/hobby stores, comic book stores, independent bookstores, and record shops. Consumer audience: Penn State students and State College residents in the downtown State College area."
       }
     },
     {
       "@type": "Organization",
-      "@id": "https://pnchy.app/#org",
+      "@id": "https://www.pnchy.app/#org",
       "name": "Pnchy",
-      "url": "https://pnchy.app",
+      "url": "https://www.pnchy.app",
       "sameAs": [
         "https://www.linkedin.com/company/pnchy",
         "https://github.com/AriS10223/Pnchy-site"
@@ -108,14 +108,38 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://pnchy.app/#faq",
+      "@id": "https://www.pnchy.app/#faq",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "What is Pnchy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pnchy is a loyalty aggregator and community platform for independent local businesses — coffee shops, comic book stores, restaurants, and barbershops with 1–3 locations. Consumers collect digital punch card stamps across multiple local merchants in one app and participate in Density Drops: group rewards that activate when enough verified users gather near a business. Hardware-free, starts free for merchants. Currently in development, launching in downtown State College, PA."
+            "text": "Pnchy is the app that turns your regulars into your best marketing. One digital punch card for every local spot you love: barbershops, cafes, bars, comic shops, record stores, and more. Real rewards for actually showing up. No app-hopping between five different loyalty apps, no plastic card you lose in a drawer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a digital punch card app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same idea as the paper card taped to the register, minus the paper. Scan a QR code at checkout, get stamped, watch your reward bar fill up. Merchants can optionally use that same QR to process the transaction too, no need to rip out an existing POS system if you'd rather keep it. It's instant, it can't be faked or photocopied, and it's not getting lost in the bottom of your bag."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does this help small businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most independent shops have zero idea who their regulars are, or when a regular quietly turns into a one-time visit. That's expensive: Harvard Business Review found that boosting customer retention by just 5% can lift profits 25 to 95%, since keeping a regular costs far less than chasing a new customer. It's bigger than any one shop, too. Small businesses generate 44% of all U.S. economic activity, according to the Small Business Administration. They're the actual pillar of a neighborhood, not just a stat. Pnchy gives owners real visit data, automatic pings to win back lapsed customers, and a loyalty program that actually feels rewarding. No hardware to buy, no POS system to switch, free to start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Pnchy different from points-based loyalty systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Points systems make you do math to feel rewarded, and most people quit before it pays off. McKinsey research found that 77% of points-based loyalty programs fail within two years because they're just not compelling enough to keep people engaged. Pnchy is visit-based and social instead. You're not collecting points in a vacuum, you're climbing a neighborhood leaderboard and unlocking group rewards with other regulars. It's giving community, not spreadsheet."
           }
         },
         {
@@ -123,55 +147,23 @@
           "name": "What is a Density Drop?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A Density Drop is a geo-fenced, threshold-triggered group reward. A merchant defines a location zone, a user count threshold (e.g., 15 people), and a time window. When enough verified Pnchy users gather in the zone, a time-limited reward activates for everyone present. Users receive push notifications as the threshold approaches, creating urgency and social pull without ad spend."
+            "text": "A Density Drop is a reward that unlocks when enough people individually put in the time. A merchant sets the headcount goal, Pnchy sets the time window (usually around 3 hours), and each person has to dwell in the spot for a set number of minutes to count. Once enough people have clocked their dwell time within that window, everyone who showed up gets rewarded. Flash-mob energy, but it's just your favorite comic book store on a Wednesday."
           }
         },
         {
           "@type": "Question",
-          "name": "Is Pnchy available to download?",
+          "name": "Why are we ditching reviews for discovery and using foot-traffic leaderboards paired with friend-only reviews?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pnchy is currently in development. The app is not yet available on the App Store or Google Play. A launch is planned for downtown State College, Pennsylvania. Visit pnchy.app for updates."
+            "text": "Star ratings are broken. Anyone can leave five stars without ever walking through the door, and it's such a widespread problem that the FTC finalized a federal rule in 2024 banning fake reviews and testimonials outright. Pnchy ranks spots by verified foot traffic instead: real people, physically showing up, over and over. And the only opinions you actually see are from friends you trust, not strangers with an agenda, which lines up with Nielsen's research that 92% of people trust recommendations from friends and family over any form of advertising. Discovery should feel like a recommendation from your group chat, not a coin flip."
           }
         },
         {
           "@type": "Question",
-          "name": "Is Pnchy free for merchants?",
+          "name": "How do I get my favorite local shop onto Pnchy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The Starter tier is permanently free and includes digital punch cards, basic visit tracking, and map listing. Paid tiers start at $29/month for analytics, push notifications, and custom rewards."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Pnchy require hardware?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Merchants use their existing smartphone camera to scan customer QR codes. No tablet, terminal, or hardware purchase is required."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is Pnchy different from Square Loyalty or FiveStars?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pnchy is payment-agnostic — it works above any payment system without requiring merchants to switch processors. Square Loyalty only works within the Square ecosystem; FiveStars requires joining SumUp's network. Pnchy also offers features unavailable on those platforms: a community discovery map, a competitive merchant leaderboard (Owner of the Block), and Density Drops (group-triggered rewards)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are there any loyalty apps or loyalty aggregators in State College PA?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pnchy (pnchy.app) is a loyalty aggregator currently in development and planned to launch in downtown State College, PA — serving both Penn State students and permanent State College residents. No other loyalty aggregator is currently active in the State College market as of 2025–2026."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Owner of the Block?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Owner of the Block is Pnchy's merchant competitive leaderboard. It ranks merchants by category within a neighborhood (e.g., top coffee shops in State College) based on verified foot traffic and loyalty engagement. Rankings update daily and are visible to both merchants and consumers on the Connector Map."
+            "text": "Search for them in the widget above or on our petition page and sign. That's your nomination. Once enough people ask for the same business, we reach out directly to bring them onboard. The petition is literally how we decide who gets onto Pnchy first."
           }
         }
       ]

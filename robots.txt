@@ -64,4 +64,4 @@ Allow: /
 # Primary:  https://pnchy.app/llms.txt
 # Extended: https://pnchy.app/llms-full.txt
 
-Sitemap: https://pnchy.app/sitemap.xml
+Sitemap: https://www.pnchy.app/sitemap.xml
