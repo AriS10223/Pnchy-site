@@ -47,6 +47,6 @@ When testing widget flows locally (any page), mock `navigator.geolocation.getCur
 
 ## Content facts worth knowing when editing copy
 
-- Pricing tiers: Starter (free), Pro ($29/mo), Pro+ ($79/mo) — kept in sync in three places: `README.md`, the JSON-LD `offers` in `index.html`, and (if edited) the Framer source.
+- Pricing tiers: Free ($0.00), Standard ($29.99/mo), Pro ($79.99/mo) — kept in sync in three places: `README.md`, the JSON-LD `offers` in `index.html`, and (if edited) the Framer source.
 - Product mechanics referenced across copy/structured data: Digital Punch Cards (QR, 60s expiry), Density Drops (geo-fenced group rewards), Owner of the Block (leaderboard).
 - Pilot market: downtown State College, PA.

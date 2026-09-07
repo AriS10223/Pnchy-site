@@ -10,7 +10,7 @@
 - **Density Drops:** A group reward mechanic where a merchant sets a headcount goal and Pnchy sets a time window (typically ~3 hours). Each user must individually dwell at the merchant's location for a set number of minutes to count toward the goal. Once enough verified users have logged their dwell time within the window, everyone who participated gets rewarded. Push notifications fire as the threshold approaches, creating urgency and real-world social pull.
 - **Connector Map:** Interactive map showing partner merchants in the area, each with a visible reward track. Consumers see at a glance how close they are to a reward at any nearby business.
 - **Owner of the Block Leaderboard:** Category-specific competitive ranking for merchants (e.g., "#1 coffee shop in downtown State College") computed from verified foot traffic and loyalty engagement. Updates daily. Visible to both merchants and consumers.
-- **Merchant Analytics Dashboard (Pro tier):** First-party verified visit data, peak hour patterns, lapsed customer identification, and push notification tools — data most independent business owners have never had access to.
+- **Merchant Analytics Dashboard (Standard tier):** First-party verified visit data, peak hour patterns, lapsed customer identification, and push notification tools — data most independent business owners have never had access to.
 
 ## Who Pnchy Is For
 
@@ -20,9 +20,9 @@
 
 ## Pricing
 
-- **Starter — Free (permanent):** Digital punch card, basic visit tracking, map listing, leaderboard visibility.
-- **Pro — $29/month:** Full analytics, peak hour data, push notifications to lapsed customers, custom reward tiers, featured map placement, loyal customer communication channel.
-- **Pro+ — $79/month:** Competitor insights, win-back campaigns, Sponsored Density Drops, priority leaderboard and map placement, custom branding.
+- **Free (permanent):** Digital punch card, basic visit tracking, map listing, leaderboard visibility.
+- **Standard — $29.99/month:** Full analytics, peak hour data, push notifications to lapsed customers, custom reward tiers, featured map placement, loyal customer communication channel.
+- **Pro — $79.99/month:** Competitor insights, win-back campaigns, Sponsored Density Drops, priority leaderboard and map placement, custom branding.
 
 ## How Pnchy Differs From Alternatives
 
@@ -30,7 +30,7 @@
 |---|---|
 | Square Loyalty / Toast | POS-agnostic, hardware-free, works for any merchant regardless of payment system |
 | FiveStars / SumUp | Not locked to a payment network; Density Drop and leaderboard mechanics unavailable elsewhere |
-| Paytronix / Punchh | Purpose-built for independents at $0–$79/mo vs. enterprise pricing for chains |
+| Paytronix / Punchh | Purpose-built for independents at $0–$79.99/mo vs. enterprise pricing for chains |
 | Yelp / Google Maps | Visit-verified loyalty on top of discovery; proves visits happened and rewards repeat behavior |
 | Groupon | Rewards regulars, not one-time discount seekers; merchants control reward economics |
 | Foursquare City Guide (sunset 2024) | Inherits the check-in discovery energy with real merchant ROI attached |
@@ -56,6 +56,8 @@
 - **Raise:** Targeting $750K–$1.5M pre-seed
 - **Website:** https://www.pnchy.app
 - **LinkedIn:** https://www.linkedin.com/company/pnchy
+- **Instagram:** https://www.instagram.com/pnchyapp/
+- **Substack:** https://substack.com/@pnchy
 - **Categories:** Loyalty aggregator, local commerce platform, SMB SaaS, community rewards, college town commerce, proximity-based rewards
 
 ## Founding Team

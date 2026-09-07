@@ -25,7 +25,7 @@ Pnchy is **hardware-free** and **POS-agnostic** — it works above any payment s
 
 **Consumers:** Penn State students and State College residents who want to discover and support local independent businesses and earn real rewards for being regulars. One app for all the spots downtown — not a separate loyalty card for every place.
 
-**Merchants:** Independent business owners who have never had real customer visit data and can't afford or don't need enterprise loyalty tools like Paytronix. Starts free. Paid tiers from $29/month.
+**Merchants:** Independent business owners who have never had real customer visit data and can't afford or don't need enterprise loyalty tools like Paytronix. Starts free. Paid tiers from $29.99/month.
 
 ---
 
@@ -41,9 +41,9 @@ The Density Drop mechanic is especially powerful here: when a comic shop runs a 
 
 | Tier | Price | Key Features |
 |------|-------|-------------|
-| Starter | Free | Punch card, visit count, map listing, leaderboard |
-| Pro | $29/mo | Full analytics, push notifications, custom rewards, featured placement |
-| Pro+ | $79/mo | Competitor insights, win-back campaigns, Sponsored Density Drops |
+| Free | $0.00 | Punch card, visit count, map listing, leaderboard |
+| Standard | $29.99/mo | Full analytics, push notifications, custom rewards, featured placement |
+| Pro | $79.99/mo | Competitor insights, win-back campaigns, Sponsored Density Drops |
 
 ---
 
@@ -53,7 +53,7 @@ The Density Drop mechanic is especially powerful here: when a comic shop runs a 
 |-----|---------|
 | Square Loyalty | POS-agnostic; works for merchants not on Square |
 | FiveStars / SumUp | Not payment-network locked; Density Drop unavailable there |
-| Paytronix / Punchh | Built for independents at $0–$79/mo, not enterprise chains |
+| Paytronix / Punchh | Built for independents at $0–$79.99/mo, not enterprise chains |
 | Yelp / Google Maps | Visit-verified loyalty on top of discovery |
 | Groupon | Rewards regulars, not one-time discount seekers |
 | Foursquare (sunset 2024) | Check-in energy with real merchant ROI attached |

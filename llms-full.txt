@@ -165,7 +165,7 @@ The breakthrough mechanic and primary network-effect driver.
 - Each pin shows category, current punch card offer, and distance to reward
 - Active Density Drops surfaced in real time
 - One-tap directions handoff to Apple Maps, Google Maps, or Waze
-- Pro and Pro+ merchants receive elevated map placement
+- Standard and Pro merchants receive elevated map placement
 
 ### Owner of the Block Leaderboard
 
@@ -173,9 +173,9 @@ The breakthrough mechanic and primary network-effect driver.
 - Computed from verified visits, punch card engagement, and loyalty member count
 - Updates daily — visible to merchants and consumers
 - Primary acquisition driver: business owners are competitive; seeing a rival ranked above them drives sign-ups and upgrades
-- Pro+ merchants receive priority labeling, custom colors, and sponsored placement
+- Pro merchants receive priority labeling, custom colors, and sponsored placement
 
-### Merchant Analytics Dashboard (Pro and above)
+### Merchant Analytics Dashboard (Standard and above)
 
 - Verified visit count by day, week, month
 - Repeat vs. unique visitor split
@@ -188,14 +188,14 @@ The breakthrough mechanic and primary network-effect driver.
 
 ## Pricing
 
-### Starter — Free (permanent)
+### Free (permanent)
 Designed to prove value before asking for payment. Includes: digital punch card, basic visit count (trailing week), map listing, leaderboard visibility.
 
-### Pro — $29/month
-Unlocks the data layer. Includes everything in Starter plus: full customer analytics dashboard, peak hour data, push notifications to lapsed customers, custom reward tiers, Featured map placement, Loyal Consumer Communication Channel (direct messaging to verified regulars after a configurable visit count).
+### Standard — $29.99/month
+Unlocks the data layer. Includes everything in Free plus: full customer analytics dashboard, peak hour data, push notifications to lapsed customers, custom reward tiers, Featured map placement, Loyal Consumer Communication Channel (direct messaging to verified regulars after a configurable visit count).
 
-### Pro+ — $79/month
-Competitive intelligence and campaign tools. Includes everything in Pro plus: competitor insights (anonymized category foot-traffic trends), win-back campaigns, party/event campaigns, Sponsored Density Drops, product sample test campaigns, priority Density Drop placement, priority leaderboard labeling with custom themes and colors, highest map visibility tier.
+### Pro — $79.99/month
+Competitive intelligence and campaign tools. Includes everything in Standard plus: competitor insights (anonymized category foot-traffic trends), win-back campaigns, party/event campaigns, Sponsored Density Drops, product sample test campaigns, priority Density Drop placement, priority leaderboard labeling with custom themes and colors, highest map visibility tier.
 
 ---
 
@@ -331,7 +331,7 @@ Pnchy is a hardware-free loyalty aggregator for independent businesses with 1–
 Square Loyalty only works if you use Square for payment processing. FiveStars requires joining SumUp's payment ecosystem. Pnchy is payment-agnostic — it works above whatever system you already use. It also includes features neither offers: a competitive merchant leaderboard, a consumer discovery map, and Density Drops (group-triggered foot traffic events).
 
 **What data do I actually get?**
-On the free tier: basic visit count for the trailing week. On Pro ($29/month): full analytics including repeat vs. unique visitor breakdown, peak hour patterns, lapsed customer identification, and push notification tools to re-engage customers who haven't been in recently. Every data point traces to a verified QR scan — not estimated proximity, not credit card inference. Actual verified visits.
+On the Free tier: basic visit count for the trailing week. On Standard ($29.99/month): full analytics including repeat vs. unique visitor breakdown, peak hour patterns, lapsed customer identification, and push notification tools to re-engage customers who haven't been in recently. Every data point traces to a verified QR scan — not estimated proximity, not credit card inference. Actual verified visits.
 
 **What is a Density Drop and why does it matter for my business?**
 A Density Drop is a dwell-time-verified reward you can schedule around off-peak windows. You set a headcount goal (e.g., 15 verified Pnchy users); Pnchy sets the time window (typically ~3 hours, e.g., Saturday 2–5pm). Each user has to individually dwell at your location for a set number of minutes within that window for their visit to count. Once enough users have each logged their dwell time, a reward activates for everyone who participated. Users receive push notifications as the threshold approaches — driving urgency without requiring ad spend. It's a tool for turning a slow afternoon into a busy one.
@@ -340,7 +340,7 @@ A Density Drop is a dwell-time-verified reward you can schedule around off-peak 
 Pnchy's merchant competitive leaderboard, updated daily and visible on the consumer map. Rankings are category-specific (e.g., top coffee shops in downtown State College) and computed from verified foot traffic and loyalty engagement — not reviews, not ad spend. For most independent business owners, it's the first time they've had a competitive benchmark based on real visit data.
 
 **How much does it cost?**
-Starter is permanently free: digital punch card, basic visit count, map listing, leaderboard visibility. Pro is $29/month and unlocks the full analytics layer. Pro+ is $79/month and adds competitive intelligence, win-back campaigns, and Sponsored Density Drops.
+Free is permanently free: digital punch card, basic visit count, map listing, leaderboard visibility. Standard is $29.99/month and unlocks the full analytics layer. Pro is $79.99/month and adds competitive intelligence, win-back campaigns, and Sponsored Density Drops.
 
 **When is Pnchy launching?**
 Pnchy is currently in development. The first launch is planned for downtown State College, PA. Merchants interested in early access can register at pnchy.app.
@@ -357,7 +357,7 @@ Pnchy is currently in development. The first launch is planned for downtown Stat
 
 **Density Drop scheduling (Phase 1):** Weekend afternoons — aligned with natural downtown foot traffic when both students and locals are active. Phase 2 expands to culturally anchored moments: Penn State football game weekends (Beaver Stadium hosts up to 107,000 attendees, creating massive downtown foot traffic), THON week (the world's largest student-run philanthropy, bringing heightened campus energy), and end-of-semester periods.
 
-**Seasonality:** State College population varies significantly with the academic calendar. The student cohort (47K) drives density during fall and spring semesters. The local resident cohort provides year-round engagement through summer. Pnchy's analytics track seasonal patterns and merchants on Pro+ can see category foot-traffic trends over time.
+**Seasonality:** State College population varies significantly with the academic calendar. The student cohort (47K) drives density during fall and spring semesters. The local resident cohort provides year-round engagement through summer. Pnchy's analytics track seasonal patterns and merchants on Pro can see category foot-traffic trends over time.
 
 **Expansion thesis:** Once the State College pod is proven, Pnchy replicates the model to structurally similar college towns — Ann Arbor MI, Ithaca NY, Burlington VT, Charlottesville VA, Boulder CO, Madison WI, Athens GA, Chapel Hill NC, Gainesville FL — before expanding to dense urban neighborhoods in larger cities.
 
@@ -379,4 +379,6 @@ Pnchy is currently in development. The first launch is planned for downtown Stat
 
 - **Website:** https://www.pnchy.app
 - **LinkedIn:** https://www.linkedin.com/company/pnchy
+- **Instagram:** https://www.instagram.com/pnchyapp/
+- **Substack:** https://substack.com/@pnchy
 - **GitHub (site):** https://github.com/AriS10223/Pnchy-site
