@@ -482,6 +482,12 @@
       .petition-headline { font-size: clamp(32px, 9.5vw, 42px); }
       .petition-widget { margin-top: 30px; }
 
+      /* Desktop's fixed 2-column grid (minmax(220px, 260px) per column,
+         ~488px total with the gap) is wider than the viewport here and
+         was getting silently clipped by body's overflow-x: hidden instead
+         of wrapping — single column below tablet width instead. */
+      .why-grid { grid-template-columns: 1fr; max-width: 320px; gap: 28px; }
+
       /* Footer is dropped on mobile — its links (Sign Up, blog, Privacy,
          Sike) already live in the hamburger drawer above. */
       footer { display: none; }
