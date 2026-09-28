@@ -28,6 +28,12 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Hand-added CSP (2026-09-28 pen test fix) — kept in sync with
+       index.html's copy; see that file for the full rationale. NOTE:
+       frame-ancestors is deliberately NOT set here (meta tags can't
+       carry it) — clickjacking protection still needs a real HTTP
+       header via a CDN in front of GitHub Pages. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://framerusercontent.com https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://pdcihinhmukhevuqvvcq.supabase.co https://pnchy-business-check.aryansarin-as.workers.dev https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'" />
   <!-- Title/meta hand-edited for SEO -->
   <title>Pnchy: Nominate Your Local Shop in State College, PA</title>
   <meta name="description" content="Search for your favorite State College, PA business and sign the petition to bring Pnchy digital punch cards and community rewards to your block." />

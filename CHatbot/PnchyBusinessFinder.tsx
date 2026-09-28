@@ -417,32 +417,38 @@ export default function PnchyBusinessFinder({
 
     const key = slugify(`${place.name}-${place.address}`);
     try {
-      const { data: petition, error: upsertError } = await supabaseRef.current
-        .from("petitions")
-        .upsert(
-          {
-            place_key: key,
-            business_name: place.name,
-            business_address: place.address,
-          },
-          { onConflict: "place_key" }
-        )
-        .select()
-        .single();
-      if (upsertError) throw upsertError;
+      // Both writes go through security-definer RPCs, not raw table
+      // INSERT/UPDATE — see CHatbot/supabase-schema-security-fix.sql.
+      // The anon key has no direct INSERT/UPDATE grant on either table
+      // any more, so a caller can't set signature_count themselves or
+      // rewrite another business's petition row.
+      const { data: petition, error: upsertError } = await supabaseRef.current.rpc(
+        "upsert_petition",
+        {
+          p_place_key: key,
+          p_business_name: place.name,
+          p_business_address: place.address,
+        }
+      );
+      if (upsertError || !petition) throw upsertError ?? new Error("upsert_petition failed");
 
-      const { error: insertError } = await supabaseRef.current
-        .from("petition_signatures")
-        .insert({ petition_id: petition.id, email: email.trim().toLowerCase() });
+      const { error: signRpcError } = await supabaseRef.current.rpc("sign_petition", {
+        p_petition_id: petition.id,
+        p_email: email.trim().toLowerCase(),
+      });
 
-      if (insertError) {
-        if (insertError.code === "23505") {
+      if (signRpcError) {
+        if (signRpcError.code === "23505") {
           // Already signed — treat as success, not an error.
           setState("signed");
           setHolding(false);
           return;
         }
-        throw insertError;
+        // Rate-limit / validation errors from sign_petition() surface
+        // their own message text — show it instead of the generic one.
+        setSignError(signRpcError.message || "Something went wrong. Try again.");
+        setHolding(false);
+        return;
       }
 
       setSignatureCount((c) => (c ?? 0) + 1);

@@ -1,5 +1,13 @@
 {
   "name": "pnchy-business-check",
   "main": "pnchy-business-check-worker.js",
-  "compatibility_date": "2026-09-03"
+  "compatibility_date": "2026-09-03",
+  // Created by `wrangler kv namespace create RATE_LIMIT_KV` — replace
+  // "REPLACE_WITH_KV_ID" with the id it prints before deploying.
+  // Worker fails open (no rate limiting) if this binding is missing,
+  // so it's safe to deploy before this is filled in, but the fix in
+  // pnchy-business-check-worker.js won't actually take effect until it is.
+  "kv_namespaces": [
+    { "binding": "RATE_LIMIT_KV", "id": "6a28f5345c8246f39e8c836e79013429" }
+  ]
 }

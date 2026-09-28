@@ -28,6 +28,19 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Hand-added CSP (2026-09-28 pen test fix) — note before next Framer
+       re-export. Restricts script/style/img/connect origins to what this
+       page actually uses (self, GA/gtag, Google Fonts, framerusercontent
+       for OG images, the Supabase project + Cloudflare Worker behind the
+       search widget). Tested live via Chrome before shipping — no CSP
+       violations for the widget, GA, or Supabase calls.
+       NOTE: frame-ancestors is deliberately NOT set here — browsers only
+       honor that directive (and X-Frame-Options) via a real HTTP header,
+       which GitHub Pages can't send. Clickjacking protection needs the
+       site proxied through Cloudflare (nameserver change at the
+       registrar) with a Transform Rule adding the header; this meta tag
+       alone does not provide it. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://framerusercontent.com https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://pdcihinhmukhevuqvvcq.supabase.co https://pnchy-business-check.aryansarin-as.workers.dev https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'" />
   <!-- Title/meta hand-edited for SEO — note before next Framer re-export -->
   <title>Pnchy: Nominate Your Local Shop, Unlock Community Rewards</title>
   <meta name="description" content="Nominate your favorite local shop for Pnchy's community loyalty app: digital punch cards, neighborhood leaderboards & group rewards. Sign the petition." />

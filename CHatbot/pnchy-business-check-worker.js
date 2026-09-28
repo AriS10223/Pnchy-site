@@ -28,6 +28,8 @@
  *    attribution line to the widget for this — see PnchyBusinessFinder.tsx.
  *
  * Deploy:
+ *   wrangler kv namespace create RATE_LIMIT_KV   # one-time; add the
+ *     printed id to wrangler.jsonc's kv_namespaces before deploying
  *   wrangler deploy
  *   wrangler secret put ALLOWED_ORIGIN   # e.g. https://www.pnchy.app
  *
@@ -73,6 +75,29 @@ const BUSINESS_CLASSES = new Set([
   "healthcare",
 ]);
 
+// Pen-test finding: the 24h response cache only dedups IDENTICAL
+// (name, lat, lng) triples, so varying `name` bypassed it entirely —
+// nothing stopped a scripted caller from hammering this Worker (and
+// therefore Nominatim's shared free instance, risking a ban on our
+// User-Agent) with unique queries. This is a best-effort per-IP limiter
+// using KV, not a hard guarantee (KV is eventually consistent, so a
+// short burst can slightly overshoot) — sufficient to stop casual/
+// scripted abuse at this scale without pulling in Durable Objects.
+const RATE_LIMIT = 20; // requests
+const RATE_LIMIT_WINDOW_SECONDS = 60;
+
+async function checkRateLimit(env, ip) {
+  if (!env.RATE_LIMIT_KV || !ip || ip === "unknown") return true; // fail open if unconfigured
+  const key = `rl:${ip}`;
+  const current = await env.RATE_LIMIT_KV.get(key);
+  const count = current ? parseInt(current, 10) : 0;
+  if (count >= RATE_LIMIT) return false;
+  await env.RATE_LIMIT_KV.put(key, String(count + 1), {
+    expirationTtl: RATE_LIMIT_WINDOW_SECONDS,
+  });
+  return true;
+}
+
 export default {
   async fetch(request, env, ctx) {
     const origin = env.ALLOWED_ORIGIN || "*";
@@ -87,6 +112,14 @@ export default {
     }
     if (request.method !== "POST") {
       return json({ error: "POST only" }, 405, corsHeaders);
+    }
+
+    // CF-Connecting-IP is set by Cloudflare's edge from the real TCP
+    // connection — a client can send its own copy of this header, but
+    // Cloudflare overwrites it, so it isn't spoofable in practice.
+    const clientIp = request.headers.get("CF-Connecting-IP") || "unknown";
+    if (!(await checkRateLimit(env, clientIp))) {
+      return json({ error: "Too many requests. Try again in a minute." }, 429, corsHeaders);
     }
 
     if (new URL(request.url).pathname === "/city") {
