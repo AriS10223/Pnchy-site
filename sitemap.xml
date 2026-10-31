@@ -14,7 +14,13 @@
   </url>
   <url>
     <loc>https://www.pnchy.app/privacy</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.pnchy.app/terms</loc>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

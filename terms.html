@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Consent Mode (default state) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+    try {
+      if (localStorage.getItem('pnchy_cookie_consent') === 'granted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+    } catch (e) {}
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YKFWY8D4Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7YKFWY8D4Z');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pnchy — Terms of Use</title>
+  <meta name="description" content="The terms for using Pnchy Lite: paying a business, earning Pnches, and running a business on Pnchy." />
+  <link rel="canonical" href="https://www.pnchy.app/terms" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:    rgb(233, 229, 205);
+      --soft:  rgb(250, 247, 242);
+      --warm:  rgb(253, 240, 213);
+      --dark:  rgb(41, 37, 35);
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--serif);
+      min-height: 100vh;
+    }
+
+    a { color: var(--dark); }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 24px;
+      background: rgba(233, 229, 205, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--dark); }
+    .nav-logo img { height: 64px; width: auto; object-fit: contain; }
+
+    .nav-links { display: flex; gap: 8px; }
+    .nav-links a {
+      font-family: var(--sans); font-size: 13px; font-weight: 500;
+      padding: 7px 14px; border-radius: 100px; transition: opacity .15s;
+      background: var(--dark); color: var(--soft); text-decoration: none;
+    }
+    .nav-links a:hover { opacity: .8; }
+
+    /* OUTER */
+    .page {
+      min-height: 100vh;
+      background: var(--bg);
+      padding: 104px 24px 120px;
+    }
+
+    .inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding-top: 20px;
+    }
+
+    /* BACK LINK */
+    .back-link {
+      font-family: var(--serif);
+      font-size: 17px;
+      color: var(--dark);
+      opacity: 0.55;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      transition: opacity .15s;
+    }
+    .back-link:hover { opacity: .9; }
+
+    /* HEADER CARD */
+    .header-card {
+      background: var(--warm);
+      border-radius: 16px;
+      padding: clamp(20px, 6vw, 32px) clamp(20px, 6vw, 36px);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .header-card .updated {
+      font-family: var(--serif);
+      font-size: 14px;
+      opacity: 0.5;
+      font-style: italic;
+    }
+
+    .header-card h1 {
+      font-family: var(--serif);
+      font-size: clamp(30px, 8vw, 52px);
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+    }
+
+    .header-card .intro {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--dark);
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--warm);
+      border: 1.5px solid rgba(41,37,35,0.1);
+      border-radius: 6px;
+      padding: 2px 10px;
+      font-family: var(--serif);
+      font-size: 13px;
+      color: var(--dark);
+    }
+
+    /* SECTION */
+    .section {
+      border-top: 1.5px solid rgba(41,37,35,0.12);
+      padding-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .section h2 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .section p {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--dark);
+      opacity: 0.85;
+    }
+
+    .section p code {
+      font-family: var(--serif);
+      background: var(--warm);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+
+    /* TABLE */
+    .table-wrap {
+      border-radius: 12px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      border: 1.5px solid rgba(41,37,35,0.1);
+    }
+
+    table { min-width: 480px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--serif);
+      font-size: 16px;
+      color: var(--dark);
+    }
+
+    th {
+      text-align: left;
+      padding: 10px 14px;
+      background: var(--warm);
+      font-weight: 400;
+      font-style: italic;
+      border-bottom: 1.5px solid rgba(41,37,35,0.12);
+      font-size: 15px;
+      font-family: var(--serif);
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(41,37,35,0.08);
+      vertical-align: top;
+      line-height: 1.65;
+      opacity: 0.85;
+      font-family: var(--serif);
+      font-size: 16px;
+    }
+
+    td.italic { font-style: italic; }
+
+    tr:last-child td { border-bottom: none; }
+
+    .small-note {
+      font-family: var(--serif);
+      font-size: 14px;
+      opacity: 0.6;
+      line-height: 1.65;
+    }
+
+    /* COLORED CARDS */
+    .color-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .color-card {
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .color-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      opacity: 0.55;
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    .color-card p {
+      font-family: var(--serif);
+      font-size: 16px;
+      line-height: 1.65;
+      opacity: 0.92;
+      margin: 0;
+    }
+
+    .color-card p em { font-style: italic; }
+
+    /* REG GRID */
+    .reg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .reg-card {
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .reg-card .reg-key {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-style: italic;
+      margin: 0 0 6px;
+    }
+
+    .reg-card .reg-desc {
+      font-family: var(--serif);
+      font-size: 15px;
+      opacity: 0.9;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* FOOTER CTA CARD */
+    .footer-cta {
+      background: var(--warm);
+      border-radius: 16px;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-cta h2 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+    }
+
+    .footer-cta p {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--dark);
+      opacity: 0.85;
+    }
+
+    .footer-cta a.email-btn {
+      display: inline-block;
+      background: var(--dark);
+      color: var(--warm);
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 400;
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      width: fit-content;
+      transition: opacity .15s;
+    }
+
+    .footer-cta a.email-btn:hover { opacity: .8; }
+
+    @media (max-width: 600px) {
+      .reg-grid { grid-template-columns: 1fr; }
+      .page { padding: 96px 16px 100px; }
+      .footer-cta { padding: clamp(20px, 6vw, 28px) clamp(20px, 6vw, 32px); }
+      .section h2 { font-size: 21px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="images/pnchy-wordmark.png" alt="Pnchy" />
+    </a>
+    <div class="nav-links">
+      <a href="https://pnchy.framer.website/early-access">Early Access</a>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="inner">
+
+      <a href="/" class="back-link">← Back to Pnchy</a>
+
+      <!-- Header card -->
+      <div class="header-card">
+        <p class="updated">Last updated: October 31, 2026 · Effective October 31, 2026</p>
+        <h1>Terms of Use</h1>
+        <p class="intro">
+          These terms cover Pnchy Lite: the shopper pay pages, the shopper account, and the Pnchy Lite app for businesses. We wrote them to be read. If something is unclear, email us and we will explain it.
+        </p>
+        <div class="tags">
+          <span class="tag">Shoppers</span>
+          <span class="tag">Business owners</span>
+          <span class="tag">App Store</span>
+          <span class="tag">Google Play</span>
+        </div>
+      </div>
+
+      <!-- Key points -->
+      <div class="section">
+        <h2>The short version</h2>
+        <div class="color-cards">
+          <div class="color-card" style="background:#3A85A6;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>You pay the business. </em>Staff set the amount. Stripe processes card, wallet, and bank payments. Refunds, goods, and service are the business's responsibility.</p>
+          </div>
+          <div class="color-card" style="background:#F2B476;">
+            <div class="color-dot" style="background:#2a1f10;"></div>
+            <p style="color:#2a1f10;"><em>Pnches are not money. </em>They have no cash value, cannot be transferred, and only count at the business that issued them.</p>
+          </div>
+          <div class="color-card" style="background:#689581;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Businesses run their own rewards. </em>Each business decides what its reward is and honors it. Pnchy provides the tools.</p>
+          </div>
+          <div class="color-card" style="background:#BB5A52;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Subscriptions are billed by Apple or Google. </em>Cancel in your store settings. Deleting your Pnchy account does not cancel a subscription.</p>
+          </div>
+          <div class="color-card" style="background:#6D4886;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Disputes go to individual arbitration, </em>with a way to opt out within 30 days and a small-claims exception. No class actions. See the dispute section for details.</p>
+          </div>
+          <div class="color-card" style="background:#3A85A6;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Your content stays yours, </em>but you are responsible for it and must keep it lawful. We have no tolerance for objectionable content and will remove it and the accounts behind it.</p>
+          </div>
+          <div class="color-card" style="background:#689581;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>We do not sell your data. </em>See the <a href="/privacy" style="color:#fff;">Privacy Policy</a> for exactly what we collect and who processes it.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agreement -->
+      <div class="section">
+        <h2>Who we are and what this agreement covers</h2>
+        <p>
+          Pnchy Lite is operated by Pnchy, LLC ("Pnchy", "we", "us"). Mailing address: 485 Foley Street, Unit 621, Somerville, MA 02145, USA. Registered office: 131 Continental Dr, Suite 305, Newark, Delaware 19713, where our registered agent is Legalinc Corporate Services Inc. Contact: <a href="mailto:hello@pnchy.app">hello@pnchy.app</a>.
+        </p>
+        <p>
+          By using the Pnchy Lite website, a pay page (a page at <code>pnchy.app/b/…</code> reached by scanning a business's QR code), a shopper account, or the Pnchy Lite app for businesses, you agree to these terms. If you do not agree, do not use the service. Our <a href="/privacy">Privacy Policy</a> explains how we handle your information.
+        </p>
+        <p>
+          If you use Pnchy Lite for a business, you are agreeing on behalf of that business and you confirm you have the authority to do so.
+        </p>
+      </div>
+
+      <!-- Early access -->
+      <div class="section">
+        <h2>Early access</h2>
+        <p>
+          Pnchy Lite is an early product. Features, limits, and pricing may change, and the service may be interrupted or limited in some places. We will give reasonable notice of changes that materially affect businesses.
+        </p>
+      </div>
+
+      <!-- Eligibility -->
+      <div class="section">
+        <h2>Who can use Pnchy</h2>
+        <p>
+          Shoppers must be at least 13 years old; if you are under the age of majority where you live, use Pnchy only with a parent or guardian's permission. Business owners must be at least 18 and authorized to accept these terms for their business.
+        </p>
+      </div>
+
+      <!-- Who does what -->
+      <div class="section">
+        <h2>Who does what</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Party</th>
+                <th>Responsible for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">The business</td>
+                <td>What it sells, its prices, the amount of each charge, refunds, handling disputes, its Pnch reward and whether it honors it, and the emails it sends to customers.</td>
+              </tr>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Pnchy</td>
+                <td>The software: creating charges, recording payments, receipts, Pnch tracking, and the business's dashboard. Pnchy does not sell goods or services to shoppers.</td>
+              </tr>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Stripe</td>
+                <td>Processing card, wallet, and bank payments, and verifying businesses. Stripe's own terms apply to payments.</td>
+              </tr>
+              <tr>
+                <td class="italic" style="white-space:nowrap;">Apple / Google</td>
+                <td>Distributing the app and billing any in-app subscription.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Shoppers -->
+      <div class="section">
+        <h2>Paying a business</h2>
+        <p>
+          Staff at the business create a charge in their app and give you a short code. You scan the business's QR code, enter the code, and pay. The amount comes from the charge; you cannot change it, so check it before you pay.
+        </p>
+        <p>
+          Card, Apple Pay, Google Pay, and bank payments are processed by Stripe, and your payment details go to Stripe, not to the business. Your statement may show a Pnchy descriptor followed by the business's name. Tips are optional and go to the business. A welcome discount, if the business offers one, is set by the business and may be based on whether this device or card has paid there before. If you choose cash, you hand the cash to the business; Pnchy only records the sale once staff confirm it.
+        </p>
+        <p>
+          We email a receipt to the address you provide. A receipt is not a marketing sign-up. Marketing email requires a separate confirmation (double opt-in) and you can unsubscribe at any time using the link in any such email. Separate from any business, you can also join the Pnchy list, which has its own unsubscribe link.
+        </p>
+        <p>
+          The business, not Pnchy, is responsible for what you bought. For a refund or a problem with a purchase, contact the business first. If you cannot resolve it, contact us at <a href="mailto:hello@pnchy.app">hello@pnchy.app</a> and we will help where we can. A refund returns the amount to your original payment method; timing depends on your bank.
+        </p>
+      </div>
+
+      <!-- Pnches -->
+      <div class="section">
+        <h2>Pnches and rewards</h2>
+        <p>
+          A Pnch is a loyalty credit at one business. It has no cash value, cannot be sold or transferred, and does not carry over between businesses. A shopper earns at most one Pnch per business per day for purchases. If a payment is refunded or disputed, the Pnch it earned is reversed.
+        </p>
+        <p>
+          Each business decides its own reward and the number of Pnches it takes, and it can change or end its program. To claim a reward, you request it in your shopper account and the business confirms it. Pnchy is not responsible if a business changes, refuses, or stops honoring a reward, although we may step in if a business misuses the service.
+        </p>
+      </div>
+
+      <!-- Business terms -->
+      <div class="section">
+        <h2>Business terms</h2>
+        <p>These apply if you use Pnchy Lite for a business.</p>
+        <div class="color-cards">
+          <div class="color-card" style="background:#3A85A6;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Stripe account. </em>To accept card payments you must set up a Stripe account through Pnchy and agree to the <a href="https://stripe.com/connect-account/legal" style="color:#fff;">Stripe Connected Account Agreement</a>. Stripe may refuse or close an account, and we are not responsible for its decisions. You must give accurate information and keep it current.</p>
+          </div>
+          <div class="color-card" style="background:#F2B476;">
+            <div class="color-dot" style="background:#2a1f10;"></div>
+            <p style="color:#2a1f10;"><em>Fees. </em>Pnchy charges no fee of its own at this time. Each card payment includes an amount that covers Stripe's estimated processing cost, which is deducted from what you receive. If you refund a payment, that processing amount is not returned to you. We will give notice before adding any Pnchy fee.</p>
+          </div>
+          <div class="color-card" style="background:#689581;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Refunds and disputes. </em>You are responsible for refunds, chargebacks, and disputes on your sales, and you agree to reimburse Pnchy for any refund, chargeback, fee, or negative balance we bear because of your sales. Refunds from the app are limited to 10 per day, and payment limits apply to protect you and shoppers.</p>
+          </div>
+          <div class="color-card" style="background:#BB5A52;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Cash. </em>Pnchy does not handle cash. Confirming cash and marking a cash sale refunded only update your records. You are responsible for the cash itself and for any change owed.</p>
+          </div>
+          <div class="color-card" style="background:#6D4886;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Customers and email. </em>You see customers as anonymous labels like "Customer #12" and you may not try to identify them. Email campaigns go only to customers who confirmed they want your messages, are limited to one per 24 hours, and may not include links, email addresses, or phone numbers. You are responsible for what you send, and it must be lawful, honest, and not harassing or misleading.</p>
+          </div>
+          <div class="color-card" style="background:#3A85A6;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;"><em>Your content. </em>You give Pnchy a license to use your business name and reward text to run the service, including in receipts and emails. You promise you have the right to use them and they do not infringe anyone's rights.</p>
+          </div>
+          <div class="color-card" style="background:#F2B476;">
+            <div class="color-dot" style="background:#2a1f10;"></div>
+            <p style="color:#2a1f10;"><em>Prohibited businesses. </em>You may not use Pnchy for anything illegal or for businesses Stripe prohibits or restricts (see <a href="https://stripe.com/legal/restricted-businesses" style="color:#2a1f10;">Stripe's list</a>).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UGC -->
+      <div class="section">
+        <h2>User content and conduct</h2>
+        <p>
+          "Your content" means anything you submit to Pnchy: a business name, emoji, reward text, or reply-to email; the text of an email campaign; a name or email address you give at checkout; and messages or feedback you send us. Pnchy Lite does not have public profiles, reviews, or a public feed, but some content, such as a business name or a campaign, is shown to other people.
+        </p>
+        <p>
+          <strong>You own it, and you license it to us.</strong> You keep ownership of your content. You give Pnchy a worldwide, non-exclusive, royalty-free license to host, store, reproduce, format, display, and send it as needed to run, secure, and improve the service (for example, in receipts, pay pages, and emails to your customers), for as long as it is in the service. You can send us feedback; we may use it without owing you anything.
+        </p>
+        <p>
+          <strong>You are responsible for it.</strong> You promise that you have the right to submit your content, that it is accurate, and that it does not violate the law or anyone's rights. We do not review content before it appears and we do not endorse it.
+        </p>
+        <p>
+          <strong>What is not allowed.</strong> There is no tolerance for objectionable content or abusive users. Do not submit content that is:
+        </p>
+        <div class="color-cards">
+          <div class="color-card" style="background:#BB5A52;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;">Illegal, fraudulent, deceptive, or misleading, including false offers, fake rewards, or phishing.</p>
+          </div>
+          <div class="color-card" style="background:#6D4886;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;">Hateful, harassing, threatening, violent, or discriminatory, or that targets a person or group.</p>
+          </div>
+          <div class="color-card" style="background:#F2B476;">
+            <div class="color-dot" style="background:#2a1f10;"></div>
+            <p style="color:#2a1f10;">Sexually explicit, or exploitative of minors in any way.</p>
+          </div>
+          <div class="color-card" style="background:#3A85A6;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;">Spam, malware, links, contact details, or other people's personal information. Business names, reward text, and campaigns may not contain links, email addresses, or phone numbers; we block these automatically.</p>
+          </div>
+          <div class="color-card" style="background:#689581;">
+            <div class="color-dot" style="background:#fff;"></div>
+            <p style="color:#fff;">Infringing someone's copyright, trademark, or other rights, or impersonating a person, business, or Pnchy.</p>
+          </div>
+        </div>
+        <p>
+          <strong>Filtering and removal.</strong> We use automated checks and may review content. We may remove or edit content, block emails, suspend or disable accounts, and report unlawful activity to authorities, at our discretion, with or without notice.
+        </p>
+        <p>
+          <strong>Reporting and blocking.</strong> If you see content or behavior that breaks these rules, email <a href="mailto:hello@pnchy.app">hello@pnchy.app</a> with the subject "Report content" and a description. We review reports promptly and aim to act on them within 24 hours. Every marketing email includes a one-click unsubscribe link, which stops that business from emailing you; you can also report the sender to us. If you think we removed content by mistake, email us and we will look again.
+        </p>
+        <p>
+          <strong>Copyright.</strong> If you believe content in Pnchy infringes your copyright, email <a href="mailto:hello@pnchy.app">hello@pnchy.app</a> with the subject "Copyright notice", identifying the work, where it appears, and your contact details. We may remove the content and end the accounts of repeat infringers.
+        </p>
+      </div>
+
+      <!-- Data privacy -->
+      <div class="section">
+        <h2>Your data and privacy</h2>
+        <p>
+          Our <a href="/privacy">Privacy Policy</a> explains what we collect, why, who processes it, how long we keep it, and your rights. It is part of these terms. In short:
+        </p>
+        <p>
+          We collect only what we need to run payments, receipts, and loyalty. We do not sell your personal information or share it for advertising. Card and bank details go straight to Stripe and are never stored by Pnchy or the business. Businesses see customers only as anonymous labels like "Customer #12" and receive no email addresses from us. You can delete your account at any time.
+        </p>
+        <p>
+          <strong>Businesses and customer information.</strong> A business is responsible for how it uses what it learns about its customers, including what a customer tells staff, and must follow privacy, consumer-protection, and email laws. A business may not use Pnchy to identify, track, profile, or contact a customer who has not agreed to be contacted, or to collect sensitive information.
+        </p>
+        <p>
+          <strong>Security.</strong> We use reasonable technical and organizational safeguards, such as encryption in transit, restricted database access, and rate limits. No system is perfectly secure. If we learn of a breach that affects your personal information, we will notify you and the authorities as the law requires.
+        </p>
+        <p>
+          <strong>Your choices.</strong> You may ask us to access, correct, export, or delete your information at <a href="mailto:hello@pnchy.app">hello@pnchy.app</a>, as described in the Privacy Policy. Pnchy Lite is not directed to children under 13 and we do not knowingly collect their information.
+        </p>
+      </div>
+
+      <!-- Pro -->
+      <div class="section">
+        <h2>In-app subscriptions (Pnchy Pro)</h2>
+        <p>
+          Optional paid plans, when offered, are sold only through the Apple App Store or Google Play, not by Pnchy directly. The price, length, and features are shown in the app and in the store before you buy.
+        </p>
+        <p>
+          Subscriptions renew automatically at the end of each period unless you cancel at least 24 hours before it ends. You can manage or cancel in your Apple ID or Google Play subscription settings. Your payment is charged by the store, and refunds follow Apple's or Google's refund policy. Deleting your Pnchy account does not cancel a subscription; cancel it in the store.
+        </p>
+      </div>
+
+      <!-- Apple / Google -->
+      <div class="section">
+        <h2>If you got the app from the App Store or Google Play</h2>
+        <p>
+          This agreement is between you and Pnchy only, not Apple or Google. Pnchy, not Apple or Google, is responsible for the app and its content. These terms do not conflict with Apple's Media Services Terms and Conditions or Google Play's terms.
+        </p>
+        <p>
+          <strong>Apple.</strong> Pnchy grants you a non-transferable license to use the app on Apple-branded products you own or control, subject to Apple's usage rules. Pnchy alone is responsible for maintenance and support, and Apple has no obligation to provide any. If the app fails to meet a warranty that applies, you may tell Apple and Apple will refund the purchase price (if any); Apple has no other warranty obligation, and any other claims, losses, or costs are Pnchy's responsibility. Pnchy, not Apple, is responsible for any claims about the app, including product liability, legal or regulatory compliance, and consumer protection or privacy claims, and for investigating, defending, and settling any third-party claim that the app infringes intellectual property rights. You confirm that you are not located in a U.S.-embargoed country or one designated a "terrorist supporting" country, and are not on a U.S. government list of prohibited or restricted parties. You must follow applicable third-party terms, such as your wireless provider's. Apple and its subsidiaries are third-party beneficiaries of this agreement and, once you accept it, may enforce it against you.
+        </p>
+        <p>
+          For questions, complaints, or claims about the app, contact Pnchy, LLC, 485 Foley Street, Unit 621, Somerville, MA 02145, USA, <a href="mailto:hello@pnchy.app">hello@pnchy.app</a>.
+        </p>
+      </div>
+
+      <!-- Acceptable use -->
+      <div class="section">
+        <h2>Acceptable use</h2>
+        <p>
+          Do not use Pnchy for fraud, to attack or overload it, or to get around its limits. In particular, do not guess or probe charge codes, scrape the service, reverse engineer the app, test stolen cards, impersonate someone else, or use another person's account. We may block activity that looks abusive.
+        </p>
+      </div>
+
+      <!-- Accounts -->
+      <div class="section">
+        <h2>Accounts, deletion, and suspension</h2>
+        <p>
+          Business owners sign in with email and password; shoppers who create an account sign in with an emailed link. Keep your sign-in secure and tell us if you think it has been misused.
+        </p>
+        <p>
+          You can delete your account in the app (Settings for businesses, your account page for shoppers). When a business deletes its account it is deactivated and anonymised, and when a shopper deletes theirs their personal details are anonymised. We keep payment and accounting records that we need for refunds, disputes, tax, and legal reasons, in anonymised form where possible.
+        </p>
+        <p>
+          We may suspend or disable a business or account, with or without notice, for risk, suspected fraud, a legal requirement, a breach of these terms, or a request from Stripe or a card network.
+        </p>
+      </div>
+
+      <!-- Disclaimers -->
+      <div class="section">
+        <h2>Disclaimers and limits on liability</h2>
+        <p>
+          Pnchy Lite is provided "as is" and "as available." To the extent the law allows, we do not promise that it will be uninterrupted or error-free, and we are not responsible for the goods or services businesses sell or the rewards they offer.
+        </p>
+        <p>
+          To the extent the law allows, Pnchy is not liable for indirect, incidental, or consequential damages, or lost profits. Our total liability for any claim relating to the service is limited to the greater of the fees you paid to Pnchy in the 12 months before the claim or US $100. Nothing here limits liability that cannot be limited by law, and some places do not allow these limits, so they may not apply to you.
+        </p>
+        <p>
+          Businesses agree to defend and indemnify Pnchy against claims and losses arising from their sales, their content and emails, their breach of these terms, or their violation of law.
+        </p>
+      </div>
+
+      <!-- Disputes -->
+      <div class="section">
+        <h2>Disputes and arbitration</h2>
+        <p>
+          <strong>Talk to us first.</strong> Email <a href="mailto:hello@pnchy.app">hello@pnchy.app</a> with a description of the problem. If we cannot resolve it within 60 days, either side may start arbitration.
+        </p>
+        <p>
+          <strong>Please read this section carefully. It affects your legal rights, including your right to sue in court and to join a class action.</strong>
+        </p>
+        <p>
+          <strong>Individual arbitration.</strong> Except as described below, any dispute between you and Pnchy about these terms, the service, or your use of it, whether based on contract, tort, statute, or anything else, will be resolved by binding arbitration administered by the American Arbitration Association (AAA) under its Consumer Arbitration Rules (or its Commercial Arbitration Rules for businesses), not in court. You and Pnchy each give up the right to a jury trial. The Federal Arbitration Act governs this section, and the arbitrator applies Massachusetts law otherwise.
+        </p>
+        <p>
+          <strong>Who decides.</strong> The arbitrator decides all questions about whether a dispute can be arbitrated and about the scope and enforceability of this section, except that only a court may decide whether the class action waiver below is enforceable.
+        </p>
+        <p>
+          <strong>Costs and place.</strong> The AAA rules decide who pays fees. If you are a consumer, we will pay all AAA filing, administrative, and arbitrator fees beyond the amount you would pay to file in court. Hearings, if any, will be held by video or phone, or in the county where you live, unless we agree otherwise. The arbitrator may award the same individual relief a court could, and nothing here limits any right that cannot be waived by law.
+        </p>
+        <p>
+          <strong>No class actions.</strong> You and Pnchy may bring claims only on an individual basis, not as a plaintiff or class member in any class, collective, consolidated, or representative action, and the arbitrator may not combine claims or award class-wide relief. If a court finds this waiver unenforceable for a claim, that claim (and only that claim) must be brought in court, and the rest of this section still applies.
+        </p>
+        <p>
+          <strong>Many similar claims.</strong> If 25 or more similar claims are filed by the same lawyers or group, the AAA will batch them in groups of up to 25 for the arbitrators to decide in sequence, so claims are handled fairly and affordably.
+        </p>
+        <p>
+          <strong>Exceptions.</strong> Either side may bring an individual claim in small-claims court, and either side may go to court to stop infringement or misuse of its intellectual property or the unauthorized use of the service.
+        </p>
+        <p>
+          <strong>Opt out.</strong> You may opt out of arbitration and the class action waiver within 30 days of first accepting these terms by emailing <a href="mailto:hello@pnchy.app">hello@pnchy.app</a> with your name, the email address you use with Pnchy, and a clear statement that you opt out. Opting out does not affect any other part of these terms. If you opt out, disputes go to the state or federal courts in Suffolk County, Massachusetts, and you and Pnchy consent to that venue.
+        </p>
+        <p>
+          <strong>Survival.</strong> This section survives the end of these terms and your use of Pnchy. Apple and Google are not parties to this section, but Apple is a third-party beneficiary of these terms as described above.
+        </p>
+      </div>
+
+      <!-- Changes -->
+      <div class="section">
+        <h2>Changes to these terms</h2>
+        <p>
+          We may update these terms. When we do, the date at the top of this page changes, and for material changes we will notify you in the app or by email if we hold your address. Using Pnchy after a change means you accept the updated terms. If you do not agree, stop using the service and delete your account. If any part of these terms is found unenforceable, the rest stays in effect.
+        </p>
+      </div>
+
+      <!-- Footer CTA -->
+      <div class="footer-cta">
+        <h2>Questions about these terms?</h2>
+        <p>We are a small team and we read every message. See also our <a href="/privacy">Privacy Policy</a>.</p>
+        <a href="mailto:hello@pnchy.app" class="email-btn">hello@pnchy.app</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
