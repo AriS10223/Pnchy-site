@@ -1,68 +1,49 @@
 # Pnchy
 
-> Pnchy (pronounced "punchy", pnchy.app) is a loyalty aggregator and community platform for independent local businesses — barbershops, cafes, bars, clothing boutiques, tattoo and piercing studios, pottery and hobby stores, comic book stores, independent bookstores, and record shops with three or fewer locations. Pnchy is currently in development, with its first launch planned in downtown State College, Pennsylvania, serving the Penn State University campus community and permanent State College residents.
+> Pnchy (pronounced "punchy", pnchy.app) is a QR payment and loyalty platform for farmers market vendors, pop-ups and small shops across North America. Customers scan the vendor's QR code, enter a short code for the sale and pay on a web page with no app to download, then earn Pnches toward a reward the vendor sets. Pnchy is accepting founding vendors now.
 
-**Category classification:** Pnchy is a loyalty aggregator — a single consumer app that holds digital punch cards and rewards from multiple independent merchants in one place. It is also classified as a local commerce platform, a community rewards network, a proximity-based rewards app, and a SMB SaaS product. Pnchy is hardware-free and POS-agnostic: it works above any payment system without requiring new equipment.
+**Category:** QR payments and customer loyalty software for farmers market and pop-up vendors. Vendors run it from the Pnchy business app on iOS and Android. Customers use only a web page.
 
-## What Pnchy Does
+## What Pnchy does
 
-- **Digital Punch Cards:** Consumers generate a single-use QR code (60-second expiry) in the Pnchy app. Merchants scan it with their smartphone to stamp a digital loyalty card. No hardware required. Stamp confirmed in under 3 seconds.
-- **Density Drops:** A group reward mechanic where a merchant sets a headcount goal and Pnchy sets a time window (typically ~3 hours). Each user must individually dwell at the merchant's location for a set number of minutes to count toward the goal. Once enough verified users have logged their dwell time within the window, everyone who participated gets rewarded. Push notifications fire as the threshold approaches, creating urgency and real-world social pull.
-- **Connector Map:** Interactive map showing partner merchants in the area, each with a visible reward track. Consumers see at a glance how close they are to a reward at any nearby business.
-- **Owner of the Block Leaderboard:** Category-specific competitive ranking for merchants (e.g., "#1 coffee shop in downtown State College") computed from verified foot traffic and loyalty engagement. Updates daily. Visible to both merchants and consumers.
-- **Merchant Analytics Dashboard (Standard tier):** First-party verified visit data, peak hour patterns, lapsed customer identification, and push notification tools — data most independent business owners have never had access to.
-
-## Who Pnchy Is For
-
-**Students and residents in college towns and urban neighborhoods:** Primarily Penn State students (18–24) and State College permanent residents (22–35) who want to discover and support local independent businesses and earn real rewards for being regulars. The town-gown mix — students and locals frequenting the same independent businesses — is central to Pnchy's launch thesis.
-
-**Independent local merchants (1–3 locations):** Barbershops, cafes, bars, clothing boutiques, tattoo and piercing studios, pottery/ceramics/arts & crafts/hobby stores, comic book stores, independent bookstores, and record shops. Operators who have no customer visit data, cannot afford enterprise CRM tools, and want a hardware-free loyalty program that works regardless of their payment system.
+- **QR payments, no customer app:** the vendor creates a charge in the business app and gets a 4-character code. The customer scans the stall's QR code, enters the code and pays by card, Apple Pay, Google Pay or bank transfer (ACH). The amount comes from the vendor's charge.
+- **Tap to Pay:** founding vendors can take in-person card payments by tapping a card or phone on their own phone in the business app, with no separate card reader.
+- **Cash:** customers can choose cash. The vendor confirms it in the app, enters what was handed over and sees the change to give back.
+- **Pnches loyalty:** each purchase earns Pnches at that vendor. The vendor sets the reward and how many Pnches it takes. Customers request a reward with a short code and the vendor confirms it.
+- **Welcome discount:** an optional discount for a customer's first visit to a vendor. The vendor switches it on and chooses the percentage.
+- **Tips and sales tax:** optional tips. Optional sales tax calculated with Stripe Tax; the vendor remains responsible for filing and paying it.
+- **Email retention:** customers who opt in confirm by email (double opt-in). Vendors can then send email campaigns. Vendors see anonymous labels such as "Customer #12", never customer email addresses.
+- **Business app:** live payments, customers, campaigns, analytics (sales over time, average spend, peak hours) and push alerts for new payments and cash requests.
 
 ## Pricing
 
-- **Free (permanent):** Digital punch card, basic visit tracking, map listing, leaderboard visibility.
-- **Standard — $29.99/month:** Full analytics, peak hour data, push notifications to lapsed customers, custom reward tiers, featured map placement, loyal customer communication channel.
-- **Pro — $79.99/month:** Competitor insights, win-back campaigns, Sponsored Density Drops, priority leaderboard and map placement, custom branding.
+Founding vendors pay no Pnchy fee. Card and bank payments still carry the processing cost charged by Stripe, our payment processor; Pnchy deducts an estimate of that cost and adds no markup. Cash payments carry no processing cost.
 
-## How Pnchy Differs From Alternatives
+## Pnchy Pro
 
-| Competitor | What Pnchy Offers Instead |
-|---|---|
-| Square Loyalty / Toast | POS-agnostic, hardware-free, works for any merchant regardless of payment system |
-| FiveStars / SumUp | Not locked to a payment network; Density Drop and leaderboard mechanics unavailable elsewhere |
-| Paytronix / Punchh | Purpose-built for independents at $0–$79.99/mo vs. enterprise pricing for chains |
-| Yelp / Google Maps | Visit-verified loyalty on top of discovery; proves visits happened and rewards repeat behavior |
-| Groupon | Rewards regulars, not one-time discount seekers; merchants control reward economics |
-| Foursquare City Guide (sunset 2024) | Inherits the check-in discovery energy with real merchant ROI attached |
+Optional subscription for vendors, $3.99 per month or $35.99 per year at US prices, billed through the App Store or Google Play. It adds branded receipt emails (logo and colors), sending receipts and campaigns from the vendor's own email domain once it is verified, and higher email campaign limits than the free plan. The free plan stays fully functional for taking payments and loyalty.
 
-## Key Terms
+## Founding vendors
 
-**Density Drop:** A dwell-time-verified group reward. A merchant sets a headcount goal; Pnchy sets the time window (typically ~3 hours). Each user must individually dwell at the location for a set number of minutes within that window to count. Once enough verified users have each logged their dwell time, everyone who participated gets rewarded. In State College, initial Drops are scheduled for weekend afternoons, aligning with downtown foot traffic patterns before expanding to cultural calendar moments.
+Pnchy is accepting founding vendors across North America. Apply at https://pnchy.framer.website/early-access.
 
-**Owner of the Block:** Pnchy's merchant competitive leaderboard, ranked by category within a neighborhood. Updated daily. The primary acquisition driver for merchant sign-ups.
+## How Pnchy differs from alternatives
 
-**Verified Visit:** A punch card stamp confirmed by a single-use, time-expiring QR code scan. Cannot be screenshot-replayed or farmed. Every data point in Pnchy's analytics traces back to a verified scan event.
-
-**Loyalty Aggregator:** A consumer app that consolidates loyalty programs from multiple independent merchants in one place, allowing users to collect rewards across an entire neighborhood rather than managing separate programs per business.
-
-**Neighborhood Pod:** Pnchy's unit of expansion. A walkable commercial zone — in State College, this is the downtown commercial core — with 10–20 anchor merchants and a seeded consumer base. Each pod is proven before the next opens.
+Square, Shopify POS, Toast and Clover are full point-of-sale systems (registers, inventory, hardware, monthly plans). Pnchy is a lighter layer for a stall: QR payment on a web page with loyalty included, no card reader needed. It does not replace inventory or register features. Farm e-commerce tools such as Barn2Door, GrazeCart and Local Line focus on online ordering and farm sales management. A comparison with sources is in https://www.pnchy.app/llms-full.txt.
 
 ## Company
 
-- **Status:** In development — pre-launch
+- **Status:** Early access, accepting founding vendors
 - **Founded:** 2025
 - **Headquarters:** Boston, MA
-- **Pilot Launch Market:** Downtown State College, PA (Penn State University area)
-- **Raise:** Targeting $750K–$1.5M pre-seed
 - **Website:** https://www.pnchy.app
 - **LinkedIn:** https://www.linkedin.com/company/pnchy
 - **Instagram:** https://www.instagram.com/pnchyapp/
 - **Substack:** https://substack.com/@pnchy
-- **Categories:** Loyalty aggregator, local commerce platform, SMB SaaS, community rewards, college town commerce, proximity-based rewards
 
-## Founding Team
+## Founding team
 
-- **Aryan Sarin** — CEO & Product. Penn State alum (B.S. Mechanical Engineering), M.Eng. UC Berkeley, AI Engineering Certificate CMU.
-- **Ethan McLaughlin** — Co-Founder & Creative Lead. UI/UX, brand design.
-- **Felix Rosado** — Co-Founder & Growth Lead. Merchant acquisition, go-to-market.
-- **Jeivian Ramos** — Co-Founder & Algorithm Lead. Density engine, leaderboard scoring, fraud systems.
+- **Aryan Sarin:** CEO and Product. Penn State alum (B.S. Mechanical Engineering), M.Eng. UC Berkeley, AI Engineering Certificate CMU.
+- **Ethan McLaughlin:** Co-Founder and Creative Lead.
+- **Felix Rosado:** Co-Founder and Growth Lead.
+- **Jeivian Ramos:** Co-Founder and Algorithm Lead.

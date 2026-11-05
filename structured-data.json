@@ -6,61 +6,70 @@
       "@id": "https://www.pnchy.app/#website",
       "url": "https://www.pnchy.app",
       "name": "Pnchy",
-      "publisher": { "@id": "https://www.pnchy.app/#org" }
+      "publisher": {
+        "@id": "https://www.pnchy.app/#org"
+      }
     },
     {
       "@type": "SoftwareApplication",
       "@id": "https://www.pnchy.app/#app",
       "name": "Pnchy",
-      "alternateName": ["Punchy", "Pnchy App", "Pnchy Loyalty", "Pnchy Aggregator"],
+      "alternateName": [
+        "Punchy",
+        "Pnchy App"
+      ],
       "url": "https://www.pnchy.app",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": [
-        "Loyalty Program Software",
-        "Local Commerce Platform",
-        "Community Rewards Network"
+        "Mobile Payments Software",
+        "Loyalty Program Software"
       ],
-      "operatingSystem": ["iOS", "Android"],
-      "description": "Pnchy is a loyalty aggregator and community platform for independent local businesses — barbershops, cafes, bars, clothing boutiques, tattoo and piercing studios, pottery and hobby stores, comic book stores, independent bookstores, and record shops with 1–3 locations. It connects consumers and merchants through digital punch cards verified by QR code, a live discovery map, and Density Drops: group-triggered rewards that activate when enough verified users gather near a participating merchant. Hardware-free, payment-agnostic, and starts free for merchants. Currently in development with a planned launch in downtown State College, PA.",
+      "operatingSystem": [
+        "iOS",
+        "Android"
+      ],
+      "description": "Pnchy is a QR payment and loyalty platform for farmers market vendors, pop-ups and small shops across North America. Customers scan a QR code, enter a short code for the sale, and pay by card, Apple Pay, Google Pay, bank transfer (ACH) or cash on a web page with no app to download, and earn Pnches toward a reward the vendor sets. Vendors use the Pnchy business app on iOS and Android. Now accepting founding vendors.",
       "featureList": [
-        "Digital punch cards with single-use QR verification (60-second expiry)",
-        "Density Drops — geo-fenced group rewards triggered by verified user count thresholds",
-        "Connector Map — interactive merchant discovery with reward track visibility",
-        "Owner of the Block — daily-updated competitive merchant leaderboard by category",
-        "Merchant analytics dashboard with first-party verified visit data",
-        "Push notifications for lapsed customer re-engagement",
-        "Loyal Consumer Communication Channel (direct merchant-to-regular messaging)",
-        "Hardware-free merchant onboarding — smartphone camera only",
-        "POS-agnostic — works above any payment system"
+        "QR payments on a web page with no customer app: card, Apple Pay, Google Pay and bank transfer (ACH)",
+        "Staff-created charges with a 4-character code, so the amount is set by the vendor",
+        "Cash sales recorded in the app, with change calculated",
+        "Tap to Pay in the business app for in-person card payments without a card reader",
+        "Pnchy Pro subscription: branded receipt emails, own sending domain and higher email campaign limits",
+        "Pnches loyalty rewards with vendor-set reward and threshold",
+        "Optional welcome discount for first-time customers",
+        "Optional tips and Stripe Tax sales tax",
+        "Double opt-in email campaigns to returning customers",
+        "Live payment alerts in the iOS and Android business app",
+        "Analytics: sales over time, average spend and peak hours"
       ],
       "offers": [
         {
           "@type": "Offer",
-          "name": "Free",
-          "price": "0.00",
+          "name": "Founding vendor",
+          "price": "0",
           "priceCurrency": "USD",
-          "description": "Permanently free. Digital punch card, basic visit tracking, map listing, leaderboard visibility."
+          "description": "Founding vendors pay no Pnchy fee. Card and bank payments still carry an estimate of Stripe's processing cost, with no Pnchy markup."
         },
         {
           "@type": "Offer",
-          "name": "Standard",
-          "price": "29.99",
+          "name": "Pnchy Pro monthly",
+          "price": "3.99",
           "priceCurrency": "USD",
           "billingIncrement": "P1M",
-          "description": "Full analytics dashboard, peak hour data, push notifications to lapsed customers, custom reward tiers, featured map placement, loyalty communication channel."
+          "description": "Optional subscription billed through the App Store or Google Play at US prices: branded receipt emails, own sending domain and higher email campaign limits."
         },
         {
           "@type": "Offer",
-          "name": "Pro",
-          "price": "79.99",
+          "name": "Pnchy Pro annual",
+          "price": "35.99",
           "priceCurrency": "USD",
-          "billingIncrement": "P1M",
-          "description": "Competitor insights, win-back and event campaigns, Sponsored Density Drops, priority leaderboard placement with custom branding."
+          "billingIncrement": "P1Y",
+          "description": "Annual Pro subscription billed through the App Store or Google Play at US prices."
         }
       ],
-      "targetAudience": {
+      "audience": {
         "@type": "Audience",
-        "audienceType": "Independent local business owners (1–3 locations): barbershops, cafes, bars, clothing boutiques, tattoo and piercing studios, pottery/ceramics/arts & crafts/hobby stores, comic book stores, independent bookstores, and record shops. Consumer audience: Penn State students and State College residents in the downtown State College area."
+        "audienceType": "Farmers market vendors, pop-up vendors and small shops in North America"
       }
     },
     {
@@ -76,7 +85,7 @@
         "https://pnchy.framer.website",
         "https://github.com/AriS10223/Pnchy-site"
       ],
-      "description": "Pnchy is a community loyalty platform for independent local businesses, offering digital punch cards, neighborhood leaderboards, and organized community meetups called Density Drops.",
+      "description": "Pnchy builds QR payment and loyalty tools for farmers market vendors, pop-ups and small shops in North America.",
       "foundingDate": "2025",
       "founders": [
         {
@@ -84,9 +93,18 @@
           "name": "Aryan Sarin",
           "jobTitle": "CEO & Co-Founder",
           "alumniOf": [
-            {"@type": "CollegeOrUniversity", "name": "Pennsylvania State University"},
-            {"@type": "CollegeOrUniversity", "name": "University of California Berkeley"},
-            {"@type": "CollegeOrUniversity", "name": "Carnegie Mellon University"}
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Pennsylvania State University"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "University of California Berkeley"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Carnegie Mellon University"
+            }
           ]
         },
         {
@@ -113,8 +131,7 @@
       },
       "areaServed": {
         "@type": "Place",
-        "name": "Downtown State College, Pennsylvania",
-        "description": "Penn State University area — Centre County, central Pennsylvania"
+        "name": "North America"
       }
     },
     {
@@ -126,55 +143,87 @@
           "name": "What is Pnchy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pnchy is the app that turns your regulars into your best marketing. One digital punch card for every local spot you love: barbershops, cafes, bars, comic shops, record stores, and more. Real rewards for actually showing up. No app-hopping between five different loyalty apps, no plastic card you lose in a drawer."
+            "text": "Pnchy is a QR payment and loyalty tool for farmers market vendors, pop-ups and small shops. Customers scan your QR code, enter the short code you create for the sale, and pay on a web page with no app to download. Every purchase earns Pnches toward a reward you set, so first-time buyers turn into regulars. Pnchy is currently accepting founding vendors across North America."
           }
         },
         {
           "@type": "Question",
-          "name": "What is a digital punch card app?",
+          "name": "How does a customer pay at my stall?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Same idea as the paper card taped to the register, minus the paper. Scan a QR code at checkout, get stamped, watch your reward bar fill up. Merchants can optionally use that same QR to process the transaction too, no need to rip out an existing POS system if you'd rather keep it. It's instant, it can't be faked or photocopied, and it's not getting lost in the bottom of your bag."
+            "text": "You create a charge in the Pnchy business app and get a 4-character code. The customer scans your stall's QR code, enters that code, and pays by card, Apple Pay, Google Pay or bank transfer (ACH) on a web page. The amount comes from your charge, so the customer cannot type a different one. A customer can also choose to pay cash, and you confirm it in the app."
           }
         },
         {
           "@type": "Question",
-          "name": "How does this help small businesses?",
+          "name": "Do my customers need to download an app?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most independent shops have zero idea who their regulars are, or when a regular quietly turns into a one-time visit. That's expensive: Harvard Business Review found that boosting customer retention by just 5% can lift profits 25 to 95%, since keeping a regular costs far less than chasing a new customer. It's bigger than any one shop, too. Small businesses generate 44% of all U.S. economic activity, according to the Small Business Administration. They're the actual pillar of a neighborhood, not just a stat. Pnchy gives owners real visit data, automatic pings to win back lapsed customers, and a loyalty program that actually feels rewarding. No hardware to buy, no POS system to switch, free to start."
+            "text": "No. Paying and earning Pnches both happen on a web page after a QR scan. Vendors use the Pnchy business app on iOS and Android to create charges, watch payments come in live, and get an alert when a payment or cash request arrives."
           }
         },
         {
           "@type": "Question",
-          "name": "How is Pnchy different from points-based loyalty systems?",
+          "name": "Can I take in-person card payments without a card reader?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Points systems make you do math to feel rewarded, and most people quit before it pays off. McKinsey research found that 77% of points-based loyalty programs fail within two years because they're just not compelling enough to keep people engaged. Pnchy is visit-based and social instead. You're not collecting points in a vacuum, you're climbing a neighborhood leaderboard and unlocking group rewards with other regulars. It's giving community, not spreadsheet."
+            "text": "Yes. Founding vendors can use Tap to Pay in the Pnchy business app to take in-person card payments by tapping a customer's card or phone on your own phone, so no separate card reader is needed. The sale still earns the customer Pnches."
           }
         },
         {
           "@type": "Question",
-          "name": "What is a Density Drop?",
+          "name": "What does Pnchy cost for vendors?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A Density Drop is a reward that unlocks when enough people individually put in the time. A merchant sets the headcount goal, Pnchy sets the time window (usually around 3 hours), and each person has to dwell in the spot for a set number of minutes to count. Once enough people have clocked their dwell time within that window, everyone who showed up gets rewarded. Flash-mob energy, but it's just your favorite comic book store on a Wednesday."
+            "text": "Founding vendors pay no Pnchy fee. Card and bank payments still carry the processing cost charged by Stripe, our payment processor. Pnchy adds no markup on top: the amount deducted is an estimate of Stripe's processing cost. Cash payments carry no processing cost."
           }
         },
         {
           "@type": "Question",
-          "name": "Why are we ditching reviews for discovery and using foot-traffic leaderboards paired with friend-only reviews?",
+          "name": "What does Pnchy Pro add?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Star ratings are broken. Anyone can leave five stars without ever walking through the door, and it's such a widespread problem that the FTC finalized a federal rule in 2024 banning fake reviews and testimonials outright. Pnchy ranks spots by verified foot traffic instead: real people, physically showing up, over and over. And the only opinions you actually see are from friends you trust, not strangers with an agenda, which lines up with Nielsen's research that 92% of people trust recommendations from friends and family over any form of advertising. Discovery should feel like a recommendation from your group chat, not a coin flip."
+            "text": "Pro is an optional subscription for vendors, $3.99 a month or $35.99 a year at US prices, billed through the App Store or Google Play. It adds branded receipt emails with your logo and colors, sending receipts and campaigns from your own email domain once it is verified, and higher email campaign limits than the free plan. The free plan stays fully functional for taking payments and loyalty."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I get my favorite local shop onto Pnchy?",
+          "name": "What is a founding vendor?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Search for them in the widget above or on our petition page and sign. That's your nomination. Once enough people ask for the same business, we reach out directly to bring them onboard. The petition is literally how we decide who gets onto Pnchy first."
+            "text": "Founding vendors are the first farmers market and pop-up vendors to use Pnchy. We are accepting them now across North America. Apply on our early access page and we will follow up with next steps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does loyalty work for my customers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each purchase earns a customer Pnches at your shop. You choose the reward and how many Pnches it takes. When a customer reaches it, they request the reward with a short code and you confirm it in the app. You can also switch on a welcome discount for first-time customers and choose the percentage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Pnchy help me bring customers back?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Customers can tick a box at checkout to hear from you. They confirm by email first, and only then can you send them email campaigns about sales and events. You see anonymous labels such as Customer #12, never customer email addresses. Your dashboard also shows sales over time, average spend and peak hours, so you know which market days work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Pnchy handle tips, sales tax and cash?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can turn on optional tips for the pay page. If you turn on sales tax, it is calculated with Stripe Tax and added to the sale, and you stay responsible for filing and paying it. Cash sales are recorded in the app too, and the app shows the change to give back."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Pnchy different from Square, Shopify POS or Toast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Square, Shopify POS and Toast are full point-of-sale systems with registers, inventory and, in many plans, hardware and monthly fees. Pnchy is a lighter layer built for a stall: a QR code and a web page for payment with loyalty included, no card reader needed, and no Pnchy fee for founding vendors. It does not replace inventory or register features."
           }
         }
       ]
